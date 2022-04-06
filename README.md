@@ -33,4 +33,3 @@ It's pre-configured with a set of tools which'll help students produce industry-
 - _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
 - _Nodemon_ : Allows to restart the server everytime a .js file is udated
 
-Test aurore
