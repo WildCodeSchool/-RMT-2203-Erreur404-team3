@@ -3,9 +3,9 @@ import React from "react";
 function DishesInfos() {
   return (
     <div>
-      <h2>My Profile</h2>
-      <p>VANDANJON</p>
-      <p>Remote Campus</p>
+      <h2>Nom du plat</h2>
+      <h2>Allergènes</h2>
+      <h2>Description</h2>
     </div>
   );
 }
