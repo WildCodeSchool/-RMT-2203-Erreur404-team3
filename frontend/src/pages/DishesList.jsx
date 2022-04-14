@@ -1,11 +1,16 @@
 import React from "react";
+import DishItem from "../components/DishItem";
+import dishes from "../datas/Dishes";
 
 function DishesList() {
   return (
-    <div>
-      <h2>My Profile</h2>
-      <p>VANDANJON</p>
-      <p>Remote Campus</p>
+    <div className="dishesList-container">
+      <h2>Liste des plats</h2>
+      <div>
+        {dishes.map((dish) => (
+          <DishItem key={dish.index} dish={dish} />
+        ))}
+      </div>
     </div>
   );
 }
