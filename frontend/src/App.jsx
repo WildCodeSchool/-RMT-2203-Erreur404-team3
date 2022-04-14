@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import DishesInfos from "./pages/DishesInfos";
 import Home from "./pages/Home";
-import Bidou from "./pages/DishesList";
+import DishesList from "./pages/DishesList";
 
 import "./App.css";
 
 function App() {
   return (
-    // <h1>pouet</h1>
     <Router>
       <div>
         <nav>
@@ -15,14 +15,14 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="disheslist">Dishes List</Link>
+              <Link to="/disheslist">Dishes List</Link>
             </li>
           </ul>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="disheslist" element={<Bidou />} />
-          <Route />
+          <Route path="/disheslist" element={<DishesList />} />
+          <Route path="/dishesinfos" element={<DishesInfos />} />
           <Route />
           <Route />
           <Route />
