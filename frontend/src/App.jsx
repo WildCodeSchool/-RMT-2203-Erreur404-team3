@@ -8,28 +8,26 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/disheslist">Dishes List</Link>
-            </li>
-          </ul>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/disheslist" element={<DishesList />} />
-          <Route path="/dishesinfos" element={<DishesInfos />} />
-          <Route />
-          <Route />
-          <Route />
-          <Route />
-          <Route />
-        </Routes>
-      </div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/disheslist">Dishes List</Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/disheslist" element={<DishesList />} />
+        <Route path="/dishesinfos" element={<DishesInfos />} />
+        <Route />
+        <Route />
+        <Route />
+        <Route />
+        <Route />
+      </Routes>
     </Router>
   );
 }
