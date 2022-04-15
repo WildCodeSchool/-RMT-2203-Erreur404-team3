@@ -6,9 +6,10 @@ import Button from "../components/Button";
 import FloattingText from "../components/FloattingText";
 import FloattingTitle from "../components/FloattingTitle";
 
-// Some random colors
+// Les couleurs des bulles
 const colors = ["#54F98D", "#9683EC", "#E73E01", "#DF73FF"];
 
+// La création des bulles
 const numBalls = 40;
 const balls = [];
 
@@ -26,7 +27,7 @@ for (let i = 0; i < numBalls; i++) {
   document.body.append(ball);
 }
 
-// Keyframes
+// Le mouvement des bulles
 balls.forEach((el, i) => {
   const to = {
     x: Math.random() * (i % 2 === 0 ? -11 : 11),
