@@ -10,7 +10,7 @@ import FloattingTitle from "../components/FloattingTitle";
 const colors = ["#54F98D", "#9683EC", "#E73E01", "#DF73FF"];
 
 // La création des bulles
-const numBalls = 40;
+const numBalls = 60;
 const balls = [];
 
 for (let i = 0; i < numBalls; i++) {
