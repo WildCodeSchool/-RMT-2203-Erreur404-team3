@@ -1,5 +1,7 @@
+/* eslint-disable react/jsx-no-undef */
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Bidou from "./pages/DishesList";
 
 import "./App.css";
 
