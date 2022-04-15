@@ -119,6 +119,11 @@ a.composent-button-link {
   font-family: var(--title-main-font);
   color: rgb(255, 184, 52);
   letter-spacing: 0.05rem;
+  text-shadow:
+        black 1px 1px,
+        black -1px 1px,
+        black -1px -1px,
+        black 1px -1px;
 }
 /*Les boutons de la page home*/
 
