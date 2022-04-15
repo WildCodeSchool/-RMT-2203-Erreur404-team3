@@ -3,6 +3,8 @@
 import React from "react";
 import Logos from "../components/Logos";
 import Button from "../components/Button";
+import FloattingText from "../components/FloattingText";
+import FloattingTitle from "../components/FloattingTitle";
 
 // Some random colors
 const colors = ["#54F98D", "#9683EC", "#E73E01", "#DF73FF"];
@@ -50,6 +52,13 @@ export default function Home() {
   return (
     <div className="home">
       <Logos />
+      <FloattingTitle title="Adopte un reste, c'est quoi ?" />
+      <FloattingText
+        text="Cette année plus que jamais, la générosité et la solidarité sont de mise, alors à l'action !
+          Très simplement, tu peux faire profiter un voisin d`un plat que tu as cuisiné en trop grande
+          quantité ou d'ingrédients qui sinon partiront tristement à la
+          poubelle."
+      />
       <div className="home-button-div">
         <Button link="/disheslist" text="Je prends !" />
         <Button link="/dish" text="Je donne !" />
