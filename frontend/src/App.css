@@ -139,3 +139,28 @@ a.composent-button-link {
   border-radius: 100%;
   opacity: 0.7;
 }
+
+/****************** DISHES LIST/ITEM *********************/
+
+.dishesList-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+}
+
+.dishItem-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  background-color: cadetblue;
+  margin: 10px 0;
+  padding: 20px;
+  min-width: 30vw;
+}
+
+.dishItem-img {
+  width: 120px;
+  border-radius: 50%;
+}
