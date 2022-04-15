@@ -19,14 +19,14 @@ function App() {
               <Link to="disheslist">Dishes List</Link>
             </li>
             <li>
-              <Link to="dishesInfos">Dishes Infos</Link>
+              <Link to="dishesinfos">Dishes Infos</Link>
             </li>
           </ul>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="disheslist" element={<Bidou />} />
-          <Route path="dishesInfos" element={<DishesInfos />} />
+          <Route path="dishesinfos" element={<DishesInfos />} />
           <Route />
           <Route />
           <Route />

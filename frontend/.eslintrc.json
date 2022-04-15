@@ -27,7 +27,7 @@
     ],
     "react/react-in-jsx-scope": "off",
     "react/jsx-one-expression-per-line": "off",
-    "react/prop-types": 2
+    "react/prop-types": 0
   },
   "settings": {
     "import/resolver": {
