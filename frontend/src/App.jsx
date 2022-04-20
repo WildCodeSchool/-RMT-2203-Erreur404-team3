@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Bidou from "./pages/DishesList";
 
 import "./App.css";
+import Geo from "./pages/Geo";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="disheslist" element={<Bidou />} />
         <Route path="dish" element={<Bidou />} />
-        <Route />
+        <Route path="geo" element={<Geo />} />
         <Route />
         <Route />
         <Route />

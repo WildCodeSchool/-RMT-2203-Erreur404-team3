@@ -3,17 +3,16 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-plusplus */
 import React from "react";
+import Map from "@components/Map";
 import Logos from "../components/Logos";
 import Button from "../components/Button";
 import FloattingText from "../components/FloattingText";
 import FloattingTitle from "../components/FloattingTitle";
-import LittleBubbles from "../components/LittleBubbles";
 
 export default function Home() {
   return (
     <div className="home">
       <Logos />
-      <LittleBubbles />
       <FloattingTitle title="Adopte un reste, c'est quoi ?" />
       <FloattingText
         text="Cette année plus que jamais, la générosité et la solidarité sont de mise, alors à l'action !
@@ -22,8 +21,8 @@ export default function Home() {
           poubelle."
       />
       <div className="home-button-div">
-        <Button link="/disheslist" text="Je prends !" />
-        <Button link="/dish" text="Je donne !" />
+        <Button link="/geo" text="Je prends !" />
+        <Button link="/geo" text="Je donne !" />
       </div>
     </div>
   );
