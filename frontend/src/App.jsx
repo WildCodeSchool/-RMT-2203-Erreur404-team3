@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import DishesInfos from "./pages/DishesInfos";
+// eslint-disable-next-line import/no-unresolved
+import Dish from "@pages/Dish";
 import Home from "./pages/Home";
 import DishesList from "./pages/DishesList";
+import DishesInfos from "./pages/DishesInfos";
 
 import "./App.css";
 
@@ -16,13 +18,16 @@ function App() {
           <li>
             <Link to="/disheslist">Dishes List</Link>
           </li>
+          <li>
+            <Link to="/dish">Dish</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/disheslist" element={<DishesList />} />
         <Route path="/dishesinfos" element={<DishesInfos />} />
-        <Route />
+        <Route path="/dish" element={<Dish />} />
         <Route />
         <Route />
         <Route />
