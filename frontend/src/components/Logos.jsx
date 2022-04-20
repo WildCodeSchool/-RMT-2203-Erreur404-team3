@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
@@ -7,7 +8,7 @@ export default function Logos() {
   const [isFoodAdopted, setIsFoodAdopted] = React.useState(false);
 
   return (
-    // La div du lolo
+    // La div du logo
     <div className="composent-logo-div">
       {isFoodAdopted ? (
         <img
