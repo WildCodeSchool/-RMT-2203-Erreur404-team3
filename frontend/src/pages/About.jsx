@@ -1,13 +1,11 @@
 import React from "react";
 
-function Dish() {
-  return (
-    <div>
-      <h2>My Profile</h2>
-      <p>VANDANJON</p>
-      <p>Remote Campus</p>
-    </div>
-  );
-}
 
 export default Dish;
+
+function About() {
+  return <div>About</div>;
+}
+
+export default About;
+
