@@ -3,12 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-plusplus */
 import React from "react";
-import Map from "@components/Map";
 
 export default function Geo() {
-  return (
-    <div className="map">
-      <Map />
-    </div>
-  );
+  return <div className="map" />;
 }

@@ -3,7 +3,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-plusplus */
 import React from "react";
-import Map from "@components/Map";
 import LittleBubbles from "@components/LittleBubbles";
 import Logos from "../components/Logos";
 import Button from "../components/Button";
