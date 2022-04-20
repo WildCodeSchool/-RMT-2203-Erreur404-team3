@@ -1,10 +1,10 @@
-const Map = () => {
-  /**
+ const Map = () => {
+/**
    * Defines an instance of the Locator+ solution, to be instantiated
    * when the Maps library is loaded.
    */
 
-  function LocatorPlus(configuration) {
+    function LocatorPlus(configuration) {
     const locator = this;
 
     locator.locations = configuration.locations || [];
