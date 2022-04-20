@@ -1,4 +1,7 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Luckiest+Guy&display=swap");
+
+
 /*Le root et le body*/
 :root {
   --main-white-color: #f4fefe;
@@ -8,6 +11,13 @@
   --main-black-color: #1d1d1d;
   --title-main-font: 'Gagalin', sans-serif;
   --text-main-font: 'Lato', sans-serif;
+  --title-font: "Petemoss", cursive;
+  --common-font: "Lato", sans-serif;
+  --light: #fcf6bdff;
+  --dark: #171718;
+  --primary-color: #ff99c8ff;
+  --secondary-color: #e4c1f9ff;
+  --light-alternative: #a9def9ff;
 }
 
 body {
@@ -196,27 +206,3 @@ a.composent-button-link {
   margin-bottom: 1rem;
 }
 
-/****************** DISHES LIST/ITEM *********************/
-
-.dishesList-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #282c34;
-}
-
-.dishItem-container {
-  display: flex;
-  justify-content: space-between;
-  text-align: right;
-  background-color: cadetblue;
-  margin: 10px 0;
-  padding: 20px;
-  min-width: 30vw;
-}
-
-.dishItem-img {
-  width: 120px;
-  border-radius: 50%;
-}
