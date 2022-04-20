@@ -6,6 +6,8 @@ const dishes = [
       alt: "illustration de salade",
     },
     distance: 1200,
+    allergene: ["lactose", "cacahuète"],
+    description: "ceci est un gaspacho",
   },
   {
     itemName: "Spaghetti Carbonara",
@@ -14,6 +16,8 @@ const dishes = [
       alt: "illustration de spaghettis",
     },
     distance: 150,
+    allergene: ["oeufs", "farine de blé"],
+    description: "voici des lasagnes",
   },
   {
     itemName: "Grilled Whole Fish",

@@ -1,11 +1,13 @@
 import React from "react";
+import DishInfo from "../components/DishInfo";
+import dishes from "../datas/Dishes";
 
 function DishesInfos() {
   return (
-    <div>
-      <h2>My Profile</h2>
-      <p>VANDANJON</p>
-      <p>Remote Campus</p>
+    <div className="dishesInfos-container">
+      <div>
+        <DishInfo dish={dishes[0]} />
+      </div>
     </div>
   );
 }
