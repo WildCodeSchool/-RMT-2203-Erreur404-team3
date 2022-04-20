@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import "../css/Dish.css";
+
 function Dish() {
-  const [dishName, setDishName] = useState([]);
+  const [dishName, setDishName] = useState("");
+  console.warn(dishName);
   const [dish, setDish] = useState([]);
 
   const getDish = () => {
@@ -11,12 +14,13 @@ function Dish() {
         .get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dishName}`)
         .then((res) => {
           console.warn(res.data);
-          setDish(res.data[0]);
+          setDish(res.data.meals);
         });
     }
   };
 
-  console.warn(`dish = ${dish}`);
+  console.warn(dish);
+
   return (
     <div className="PageDish">
       <form action="">
@@ -30,11 +34,15 @@ function Dish() {
         </label>
       </form>
 
+      {console.warn(`dish = ${dish}`)}
+      {/* {console.warn(`resdata = ${res.data[0]}`)} */}
+
       <button type="button" onClick={getDish}>
         GET DISH
       </button>
-
-      <p>{dish}</p>
+      {dish.map((data) => (
+        <p>{data.strMeal}</p>
+      ))}
     </div>
   );
 }
