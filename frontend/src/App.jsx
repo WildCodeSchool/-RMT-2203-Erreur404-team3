@@ -1,24 +1,34 @@
-/* eslint-disable react/jsx-no-undef */
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// eslint-disable-next-line import/no-unresolved
 import Home from "./pages/Home";
-import Bidou from "./pages/DishesList";
+import DishesList from "./pages/DishesList";
+import DishesInfos from "./pages/DishesInfos";
 
 import "./App.css";
-import Geo from "./pages/Geo";
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="disheslist" element={<Bidou />} />
-        <Route path="dish" element={<Bidou />} />
-        <Route path="geo" element={<Geo />} />
-        <Route />
-        <Route />
-        <Route />
-        <Route />
-      </Routes>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="disheslist">Dishes List</Link>
+            </li>
+            <li>
+              <Link to="dishesinfos">Dishes Infos</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="disheslist" element={<DishesList />} />
+          <Route path="dishesinfos" element={<DishesInfos />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

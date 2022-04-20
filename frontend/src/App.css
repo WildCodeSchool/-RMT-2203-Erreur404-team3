@@ -1,3 +1,7 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Luckiest+Guy&display=swap");
+
+
 /*Le root et le body*/
 :root {
   --main-white-color: #f4fefe;
@@ -7,6 +11,13 @@
   --main-black-color: #1d1d1d;
   --title-main-font: 'Gagalin', sans-serif;
   --text-main-font: 'Lato', sans-serif;
+  --title-font: "Petemoss", cursive;
+  --common-font: "Lato", sans-serif;
+  --light: #fcf6bdff;
+  --dark: #171718;
+  --primary-color: #ff99c8ff;
+  --secondary-color: #e4c1f9ff;
+  --light-alternative: #a9def9ff;
 }
 
 body {
@@ -95,17 +106,16 @@ background-attachment: fixed;
 }
 
 .composent-button-link {
-      width: 8.5rem;
+      width: 8rem;
       height: 4rem;
       text-align: center;
       align-items: flex-end;
       box-shadow: inset 4px 8px 8px rgba(0, 0, 0, 0.25);
-      border-radius: 20px 20px 20px 20px;
-      color: rgb(210, 151, 210);
-      background-color: #9a48d0;
+      border-radius: 15%;
+      color: purple;
+      background-color: rgb(168, 50, 189);
       margin-top: 15%;
       z-index: 10;
-      padding: 4px;
 }
 
 a.composent-button-link {
