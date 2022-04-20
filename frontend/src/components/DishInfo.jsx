@@ -1,13 +1,13 @@
 import React from "react";
 
-function DishInfo({ dishes }) {
+function DishInfo({ dish }) {
   return (
     <div className="dishInfo-container">
-      <h2> {dishes.itemName} </h2>
+      <h2>{dish.itemName}</h2>
       <h3>Allergènes</h3>
-      <p> {dishes.allergene}</p>
+      <p>{dish.allergene}</p>
       <h3>Description</h3>
-      <p> {dishes.description}</p>
+      <p>{dish.description}</p>
       <button className="dishInfoButton" type="button">
         {" "}
         Choisir ce plat

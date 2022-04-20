@@ -6,7 +6,7 @@ function DishesInfos() {
   return (
     <div className="dishesInfos-container">
       <div>
-        <DishInfo dishes={dishes[0]} />
+        <DishInfo dish={dishes[0]} />
       </div>
     </div>
   );
