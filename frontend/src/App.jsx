@@ -1,13 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
-import Bidou from "./pages/DishesList";
 import DishesInfos from "./pages/DishesInfos";
+import Home from "./pages/Home";
+import DishesList from "./pages/DishesList";
 
 import "./App.css";
 
 function App() {
   return (
-    // <h1>pouet</h1>
     <Router>
       <div>
         <nav>
@@ -25,7 +24,7 @@ function App() {
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="disheslist" element={<Bidou />} />
+          <Route path="disheslist" element={<DishesList />} />
           <Route path="dishesinfos" element={<DishesInfos />} />
         </Routes>
       </div>
