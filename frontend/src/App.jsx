@@ -27,11 +27,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="disheslist" element={<Bidou />} />
           <Route path="dishesinfos" element={<DishesInfos />} />
-          <Route />
-          <Route />
-          <Route />
-          <Route />
-          <Route />
         </Routes>
       </div>
     </Router>
