@@ -1,4 +1,3 @@
-
 /*Le root et le body*/
 :root {
   --main-white-color: #f4fefe;
@@ -6,17 +5,17 @@
   --main-pink-color: #ff99c9;
   --main-purple-color: #e4c1f9;
   --main-black-color: #1d1d1d;
-  --title-main-font: 'Gagalin', sans-serif;
-  --text-main-font: 'Lato', sans-serif;
+  --title-main-font: "Gagalin", sans-serif;
+  --text-main-font: "Lato", sans-serif;
 }
 
 body {
-background-image: url("https://i.ibb.co/GRtPqn0/mesh.png");
-object-fit: contain;
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-background-attachment: fixed;
+  background-image: url("https://i.ibb.co/GRtPqn0/mesh.png");
+  object-fit: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 /*Le root et le body*/
 
@@ -96,16 +95,16 @@ background-attachment: fixed;
 }
 
 .composent-button-link {
-      width: 8rem;
-      height: 4rem;
-      text-align: center;
-      align-items: flex-end;
-      box-shadow: inset 4px 8px 8px rgba(0, 0, 0, 0.25);
-      border-radius: 15%;
-      color: purple;
-      background-color: rgb(168, 50, 189);
-      margin-top: 15%;
-      z-index: 10;
+  width: 8rem;
+  height: 4rem;
+  text-align: center;
+  align-items: flex-end;
+  box-shadow: inset 4px 8px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 15%;
+  color: purple;
+  background-color: rgb(168, 50, 189);
+  margin-top: 15%;
+  z-index: 10;
 }
 
 a.composent-button-link {
@@ -219,4 +218,19 @@ a.composent-button-link {
 .dishItem-img {
   width: 120px;
   border-radius: 50%;
+}
+
+/**************AutoCompletion*****************/
+
+.suggestion {
+  cursor: pointer;
+  border: 1px solid black;
+  width: 20rem;
+}
+
+.suggestion:hover {
+  background-color: gray;
+}
+
+.searchInput {
 }
