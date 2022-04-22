@@ -194,3 +194,19 @@ a.composent-button-link {
  #map {
   height: 100%;
 }
+
+.input-localisation {
+  font-family: var(--text-main-font);
+  font-size:  1rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: var(--title-main-font);
+  font-size:  1.5rem;
+  justify-content: center;
+  display: flex;
+  margin-top: 8%;
+}

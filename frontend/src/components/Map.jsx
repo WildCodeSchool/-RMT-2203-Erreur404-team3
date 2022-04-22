@@ -57,7 +57,7 @@ class MapContainer extends Component {
             getSuggestionItemProps,
             loading,
           }) => (
-            <div>
+            <div className="input-localisation">
               <input
                 {...getInputProps({
                   placeholder: "Search Places ...",
