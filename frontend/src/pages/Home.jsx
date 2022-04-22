@@ -9,7 +9,7 @@ import Button from "../components/Button";
 import FloattingText from "../components/FloattingText";
 import FloattingTitle from "../components/FloattingTitle";
 
-export default function Home() {
+function Home() {
   return (
     <div className="home">
       <Logos />
@@ -28,3 +28,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
