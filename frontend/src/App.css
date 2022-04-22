@@ -127,6 +127,11 @@ a.composent-button-link {
   font-family: var(--title-main-font);
   color: rgb(255, 184, 52);
   letter-spacing: 0.05rem;
+  text-shadow:
+        black 1px 1px,
+        black -1px 1px,
+        black -1px -1px,
+        black 1px -1px;
 }
 /*Les boutons de la page home*/
 
@@ -175,13 +180,11 @@ a.composent-button-link {
 
 .floatting-text {
   font-family: var(--text-main-font);
-  font-size: small;
+  font-size:  0.9rem;
   justify-content: center;
   display: flex;
+  margin-top: 8%;
 }
-
-/* ======== Dishes Infos =========== */
-
 .dishesInfos-container {
   background-color: brown;
   display: flex;
@@ -203,3 +206,4 @@ a.composent-button-link {
   padding: 0.5rem;
   margin-bottom: 1rem;
 }
+

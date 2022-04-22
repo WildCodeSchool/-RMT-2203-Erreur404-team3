@@ -1,4 +1,5 @@
 import React from "react";
+
 import FloattingTitle from "../components/FloattingTitle";
 import RatingCounter from "../components/RatingCounter";
 

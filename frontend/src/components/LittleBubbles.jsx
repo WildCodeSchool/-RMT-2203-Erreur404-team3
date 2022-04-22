@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { useEffect, useState } from "react";
 
 function LittleBubbles() {
@@ -22,10 +21,12 @@ function LittleBubbles() {
       balls.push(ball);
       document.body.append(ball);
     }
+
     // code inutile pour désactiver les erreurs
     if (setBalls === []) {
       console.warn("");
     }
+
     // Le mouvement des bulles
     balls.forEach((el, i) => {
       const to = {
@@ -36,7 +37,7 @@ function LittleBubbles() {
       const anim = el.animate(
         [
           { transform: "translate(0, 0)" },
-          { transform: translate(`${to.x}rem, ${to.y}rem`) },
+          { transform: translate(`${to.x}rem, ${to.y}rem`) }
         ],
         {
           duration: (Math.random() + 1) * 2000, // pour changer la vitesse
@@ -46,10 +47,12 @@ function LittleBubbles() {
           easing: "ease-in-out",
         }
       );
+
       // code inutile pour désactiver les erreurs
       if (anim === "") {
         console.warn("");
       }
+
     });
   }, []);
   return <div className="ball">{balls}</div>;
