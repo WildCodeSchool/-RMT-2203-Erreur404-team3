@@ -12,7 +12,6 @@ function Dish() {
       axios
         .get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dishName}`)
         .then((res) => {
-          console.warn(res.data);
           setDish(res.data.meals);
         });
     }
