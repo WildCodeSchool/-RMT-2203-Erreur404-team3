@@ -37,7 +37,7 @@ class MapContainer extends Component {
         console.warn("Success", latLng);
         this.setState({ address });
         this.setState({ mapCenter: latLng });
-        const userLocation = latLng;
+        const userLocation = `${address} Lat : ${latLng.lat} Long : ${latLng.lng}`;
         console.warn("The user location is :", userLocation);
       })
       .catch((error) => console.error("Error", error));
