@@ -37,7 +37,8 @@ function AutoComplete() {
     setText(text);
   };
   return (
-    <div>
+    <div className="inputt">
+      <h2>Auto-completion exemple :</h2>
       <input
         type="text"
         className="searchInput"
