@@ -5,7 +5,6 @@ import "../css/Dish.css";
 
 function Dish() {
   const [dishName, setDishName] = useState("");
-  console.warn(dishName);
   const [dish, setDish] = useState([]);
 
   const getDish = () => {
@@ -18,8 +17,6 @@ function Dish() {
         });
     }
   };
-
-  console.warn(dish);
 
   return (
     <div className="PageDish">
@@ -34,9 +31,6 @@ function Dish() {
         </label>
       </form>
 
-      {console.warn(`dish = ${dish}`)}
-      {/* {console.warn(`resdata = ${res.data[0]}`)} */}
-
       <button type="button" onClick={getDish}>
         GET DISH
       </button>
@@ -48,5 +42,3 @@ function Dish() {
 }
 
 export default Dish;
-// www.themealdb.com/api/json/v1/1/categories.php
-// www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
