@@ -191,8 +191,8 @@ a.composent-button-link {
 /*Les titres et textes*/
 
 
- #map {
-  height: 100%;
+ #googleMap {
+  height: 50%;
 }
 
 .input-localisation {

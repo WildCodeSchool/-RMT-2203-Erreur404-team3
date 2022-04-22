@@ -34,11 +34,8 @@ class MapContainer extends Component {
     geocodeByAddress(address)
       .then((results) => getLatLng(results[0]))
       .then((latLng) => {
-        console.warn("Success", latLng);
         this.setState({ address });
         this.setState({ mapCenter: latLng });
-        const userLocation = `${address} Lat : ${latLng.lat} Long : ${latLng.lng}`;
-        console.warn("The user location is :", userLocation);
       })
       .catch((error) => console.error("Error", error));
   };
@@ -60,7 +57,7 @@ class MapContainer extends Component {
             <div className="input-localisation">
               <input
                 {...getInputProps({
-                  placeholder: "Search Places ...",
+                  placeholder: "Taper votre texte ici...",
                   className: "location-search-input",
                 })}
               />
@@ -113,5 +110,5 @@ class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: `AIzaSyB3WuElGOTEK8uT0LVu5Xs179AsZyncWv8`,
+  apiKey: import.meta.env.GOOGLE_MAPS_API_KEY,
 })(MapContainer);
