@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-// eslint-disable-next-line import/no-unresolved
-import Dish from "@pages/Dish";
 import Home from "./pages/Home";
 import DishesList from "./pages/DishesList";
 import DishesInfos from "./pages/DishesInfos";

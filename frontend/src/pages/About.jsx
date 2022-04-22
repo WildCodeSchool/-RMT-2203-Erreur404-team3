@@ -1,11 +1,14 @@
 import React from "react";
-
-
-export default Dish;
+import FloattingTitle from "../components/FloattingTitle";
+import RatingCounter from "../components/RatingCounter";
 
 function About() {
-  return <div>About</div>;
+  return (
+    <>
+      <FloattingTitle />
+      <RatingCounter />
+    </>
+  );
 }
 
 export default About;
-
