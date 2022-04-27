@@ -1,3 +1,5 @@
+/* eslint-disable import/no-named-as-default-member */
+/* eslint-disable import/no-named-as-default */
 import React from "react";
 import LittleBubbles from "../components/LittleBubbles";
 import Logos from "../components/Logos";
@@ -13,7 +15,7 @@ function Home() {
       <FloattingTitle title="Adopte un reste, c'est quoi ?" />
       <FloattingText
         text="Cette année plus que jamais, la générosité et la solidarité sont de mise, alors à l'action !
-          Très simplement, tu peux faire profiter un voisin d`un plat que tu as cuisiné en trop grande
+          Très simplement, tu peux faire profiter un voisin d'un plat que tu as cuisiné en trop grande
           quantité ou d'ingrédients qui sinon partiront tristement à la
           poubelle."
       />

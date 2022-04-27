@@ -1,7 +1,16 @@
+/* eslint-disable import/no-named-as-default */
 import React from "react";
 
+import FloattingTitle from "../components/FloattingTitle";
+import RatingCounter from "../components/RatingCounter";
+
 function About() {
-  return <div>About</div>;
+  return (
+    <>
+      <FloattingTitle />
+      <RatingCounter />
+    </>
+  );
 }
 
 export default About;

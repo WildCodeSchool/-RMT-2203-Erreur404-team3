@@ -1,4 +1,7 @@
+/* eslint-disable import/no-named-as-default-member */
+/* eslint-disable import/no-named-as-default */
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 // eslint-disable-next-line import/no-unresolved
 import Home from "./pages/Home";
 import Geo from "./pages/Geo";
