@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LittleBubbles from "./LittleBubbles";
 
-function Button({ props }) {
+function Button({ link, text }) {
   return (
     <Link
       className="composent-button-link"
       onClick={() => LittleBubbles.setBalls("")}
-      to={props.link}
+      to={link}
     >
-      {props.text}
+      {text}
     </Link>
   );
 }

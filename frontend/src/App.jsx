@@ -20,6 +20,9 @@ function App() {
             <li>
               <Link to="dishesinfos">Dishes Infos</Link>
             </li>
+            <li>
+              <Link to="about">A Propos</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
