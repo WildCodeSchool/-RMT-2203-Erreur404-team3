@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LittleBubbles from "./LittleBubbles";
 
-function Button({ link, text }) {
+function Button({ text, link }) {
+
   return (
     <Link
       className="composent-button-link"

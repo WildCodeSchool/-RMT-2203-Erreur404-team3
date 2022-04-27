@@ -1,3 +1,6 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Luckiest+Guy&display=swap");
+
 /*Le root et le body*/
 :root {
   --main-white-color: #f4fefe;
@@ -182,6 +185,27 @@ a.composent-button-link {
   justify-content: center;
   display: flex;
   margin-top: 8%;
+}
+.dishesInfos-container {
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dishInfo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+}
+
+.dishInfoButton {
+  background-color: grey;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 /* ======== Dishes Infos =========== */

@@ -16,6 +16,8 @@
     "react-router-dom": "^6.3.0",
     "template-fullstack": "file:..",
     "axios": "^0.26.1"
+    "react-simple-star-rating": "^4.0.5"
+
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
