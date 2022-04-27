@@ -2,7 +2,6 @@ import React from "react";
 import DishInfo from "../components/DishInfo";
 import dishes from "../datas/Dishes";
 
-
 function DishesInfos() {
   return (
     <div className="dishesInfos-container">
