@@ -1,7 +1,3 @@
-
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Luckiest+Guy&display=swap");
-
-
 /*Le root et le body*/
 :root {
   --main-white-color: #f4fefe;
@@ -191,8 +187,8 @@ a.composent-button-link {
 /*Les titres et textes*/
 
 
- #googleMap {
-  height: 50%;
+ #map {
+  height: 100%;
 }
 
 .input-localisation {

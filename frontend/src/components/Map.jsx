@@ -36,6 +36,8 @@ class MapContainer extends Component {
       .then((latLng) => {
         this.setState({ address });
         this.setState({ mapCenter: latLng });
+        const userLocation = `${address} Lat : ${latLng.lat} Long : ${latLng.lng}`;
+        console.warn("The user location is : ", userLocation);
       })
       .catch((error) => console.error("Error", error));
   };
@@ -110,5 +112,5 @@ class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: import.meta.env.GOOGLE_MAPS_API_KEY,
+  apiKey: import.meta.env.VITE_GOOGLE_MAP_KEY,
 })(MapContainer);

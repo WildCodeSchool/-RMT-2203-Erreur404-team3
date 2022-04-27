@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Geo from "./pages/Geo";
 import DishesList from "./pages/DishesList";
 import DishesInfos from "./pages/DishesInfos";
-
 import "./App.css";
 
 function App() {
