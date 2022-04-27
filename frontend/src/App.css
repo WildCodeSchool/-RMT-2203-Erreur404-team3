@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Luckiest+Guy&display=swap");
 
 /*Le root et le body*/
@@ -207,3 +208,71 @@ a.composent-button-link {
   margin-bottom: 1rem;
 }
 
+/* ======== Dishes Infos =========== */
+
+.dishesInfos-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dishInfo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+}
+/*Les titres et textes*/
+
+ #googleMap {
+  height: 50%;
+}
+
+.input-localisation {
+  font-family: var(--text-main-font);
+  font-size:  1rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: var(--title-main-font);
+  font-size:  1.5rem;
+  justify-content: center;
+  display: flex;
+  margin-top: 8%;
+}
+
+p {
+  font-family: var(--text-main-font);
+  font-size:  0.9rem;
+  justify-content: center;
+  display: flex;
+  margin-top: 8%;
+}
+
+/**************AutoCompletion*****************/
+
+.suggestion {
+  background-color: lightgray;
+  cursor: pointer;
+  border: 1px solid black;
+  width: 30rem;
+  
+}
+
+.suggestion:hover {
+  background-color: gray;
+}
+
+.searchInput {
+}
+
+.inputt{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30rem;
+}

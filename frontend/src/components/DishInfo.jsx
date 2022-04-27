@@ -9,7 +9,6 @@ function DishInfo({ dish }) {
       <h3>Description</h3>
       <p>{dish.description}</p>
       <button className="dishInfoButton" type="button">
-        {" "}
         Choisir ce plat
       </button>
     </div>

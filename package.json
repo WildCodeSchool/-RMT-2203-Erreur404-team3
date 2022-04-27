@@ -20,10 +20,14 @@
   },
   "dependencies": {
     "@googlemaps/react-wrapper": "^1.1.31",
+    "axios": "^0.26.1",
     "dotenv": "^16.0.0",
     "google-map-react": "^2.1.10",
+    "google-maps-react": "^2.0.6",
+    "react-places-autocomplete": "^7.3.0",
     "axios": "^0.26.1",
     "react-router-dom": "^6.3.0",
     "react-simple-star-rating": "^4.0.5"
+
   }
 }
