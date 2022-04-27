@@ -7,6 +7,13 @@
   --main-black-color: #1d1d1d;
   --title-main-font: "Gagalin", sans-serif;
   --text-main-font: "Lato", sans-serif;
+  --title-font: "Petemoss", cursive;
+  --common-font: "Lato", sans-serif;
+  --light: #fcf6bdff;
+  --dark: #171718;
+  --primary-color: #ff99c8ff;
+  --secondary-color: #e4c1f9ff;
+  --light-alternative: #a9def9ff;
 }
 
 body {
@@ -118,6 +125,11 @@ a.composent-button-link {
   font-family: var(--title-main-font);
   color: rgb(255, 184, 52);
   letter-spacing: 0.05rem;
+  text-shadow:
+        black 1px 1px,
+        black -1px 1px,
+        black -1px -1px,
+        black 1px -1px;
 }
 /*Les boutons de la page home*/
 
@@ -166,9 +178,10 @@ a.composent-button-link {
 
 .floatting-text {
   font-family: var(--text-main-font);
-  font-size: small;
+  font-size:  0.9rem;
   justify-content: center;
   display: flex;
+  margin-top: 8%;
 }
 
 /* ======== Dishes Infos =========== */
@@ -186,37 +199,34 @@ a.composent-button-link {
   align-items: center;
   background-color: none;
 }
+/*Les titres et textes*/
 
-.dishInfoButton {
-  background-color: grey;
-  border-radius: 10px;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+ #googleMap {
+  height: 50%;
 }
 
-/****************** DISHES LIST/ITEM *********************/
-
-.dishesList-container {
+.input-localisation {
+  font-family: var(--text-main-font);
+  font-size:  1rem;
+  justify-content: center;
   display: flex;
   flex-direction: column;
+}
+
+h1 {
+  font-family: var(--title-main-font);
+  font-size:  1.5rem;
   justify-content: center;
-  align-items: center;
-  background-color: #282c34;
-}
-
-.dishItem-container {
   display: flex;
-  justify-content: space-between;
-  text-align: right;
-  background-color: cadetblue;
-  margin: 10px 0;
-  padding: 20px;
-  min-width: 30vw;
+  margin-top: 8%;
 }
 
-.dishItem-img {
-  width: 120px;
-  border-radius: 50%;
+p {
+  font-family: var(--text-main-font);
+  font-size:  0.9rem;
+  justify-content: center;
+  display: flex;
+  margin-top: 8%;
 }
 
 /**************AutoCompletion*****************/

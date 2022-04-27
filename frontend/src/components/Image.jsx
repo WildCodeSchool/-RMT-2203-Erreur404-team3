@@ -5,7 +5,7 @@ function Image() {
     <div>
       <img
         src="https://yt3.ggpht.com/-FJXWJ1x1bEQ/AAAAAAAAAAI/AAAAAAAAAAA/ZtyuZ-elFr4/s900-c-k-no-mo-rj-c0xffffff/photo.jpg"
-        alt=""
+        alt="Hey"
       />
     </div>
   );
