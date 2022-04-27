@@ -1,220 +1,56 @@
-
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Luckiest+Guy&display=swap");
-
-
-/*Le root et le body*/
-:root {
-  --main-white-color: #f4fefe;
-  --main-orange-color: #fcf680;
-  --main-pink-color: #ff99c9;
-  --main-purple-color: #e4c1f9;
-  --main-black-color: #1d1d1d;
-  --title-main-font: 'Gagalin', sans-serif;
-  --text-main-font: 'Lato', sans-serif;
-  --title-font: "Petemoss", cursive;
-  --common-font: "Lato", sans-serif;
-  --light: #fcf6bdff;
-  --dark: #171718;
-  --primary-color: #ff99c8ff;
-  --secondary-color: #e4c1f9ff;
-  --light-alternative: #a9def9ff;
-}
-
 body {
-background-image: url("https://i.ibb.co/GRtPqn0/mesh.png");
-object-fit: contain;
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-background-attachment: fixed;
-}
-/*Le root et le body*/
-
-/*Le header*/
-.header {
-  background-color: var(--main-black-color);
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.header__logo {
-  font-family: var(--title-main-font);
-  font-size: 2.5rem;
-  color: var(--main-white-color);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-weight: bold;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
-.header__logo:hover {
-  color: var(--main-orange-color);
+.App {
+  text-align: center;
 }
 
-.header__nav {
-  display: flex;
-  align-items: center;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.header__nav--item {
-  font-family: var(--text-main-font);
-  font-size: 1.5rem;
-  color: var(--main-white-color);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-weight: bold;
-  margin-left: 2rem;
-  cursor: pointer;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.header__nav--item:hover {
-  color: var(--main-orange-color);
-}
-
-/*Le main*/
-.main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 20px;
-}
-
-/*Le logo*/
-.composent-logo {
-  width: 80%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-bottom: 10%;
-}
-/*Le logo*/
-
-/*Les boutons de la page home*/
-.home-button-div {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-}
-
-.composent-button-link {
-      width: 8rem;
-      height: 4rem;
-      text-align: center;
-      align-items: flex-end;
-      box-shadow: inset 4px 8px 8px rgba(0, 0, 0, 0.25);
-      border-radius: 15%;
-      color: purple;
-      background-color: rgb(168, 50, 189);
-      margin-top: 15%;
-      z-index: 10;
-}
-
-a.composent-button-link {
-  text-decoration: none;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: var(--main-black-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--title-main-font);
-  color: rgb(255, 184, 52);
-  letter-spacing: 0.05rem;
-  text-shadow:
-        black 1px 1px,
-        black -1px 1px,
-        black -1px -1px,
-        black 1px -1px;
-}
-/*Les boutons de la page home*/
-
-/*L'animation Bubbles*/
-.ball {
-  position: absolute;
-  border-radius: 100%;
-  opacity: 0.7;
-  z-index: -1;
-}
-/*L'animation Bubbles*/
-
-/****************** DISHES LIST/ITEM *********************/
-
-.dishesList-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.App-header {
   background-color: #282c34;
-}
-
-.dishItem-container {
-  display: flex;
-  justify-content: space-between;
-  text-align: right;
-  background-color: cadetblue;
-  margin: 10px 0;
-  padding: 20px;
-  min-width: 30vw;
-}
-
-.dishItem-img {
-  width: 120px;
-  border-radius: 50%;
-}
-
-/*Les titres et textes*/
-
-.floatting-title {
-  font-family: var(--title-main-font);
-  font-size: large;
-  justify-content: center;
-  display: flex;
-}
-
-.floatting-text {
-  font-family: var(--text-main-font);
-  font-size:  0.9rem;
-  justify-content: center;
-  display: flex;
-  margin-top: 8%;
-}
-
-/*Les titres et textes*/
-
-
- #googleMap {
-  height: 50%;
-}
-
-.input-localisation {
-  font-family: var(--text-main-font);
-  font-size:  1rem;
-  justify-content: center;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-h1 {
-  font-family: var(--title-main-font);
-  font-size:  1.5rem;
-  justify-content: center;
-  display: flex;
-  margin-top: 8%;
+.App-link {
+  color: #61dafb;
 }
 
-p {
-  font-family: var(--text-main-font);
-  font-size:  0.9rem;
-  justify-content: center;
-  display: flex;
-  margin-top: 8%;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  font-size: calc(10px + 2vmin);
 }
