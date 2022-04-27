@@ -8,14 +8,15 @@ import { useEffect, useState } from "react";
 function AutoComplete() {
   const [meals, setMeals] = useState([]);
   const [text, setText] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
+  const [, setSuggestions] = useState("");
+  const loadMeals = async () => {
+    const response = await axios.get(
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=`
+    );
+    setMeals(response.data.meals);
+  };
+
   useEffect(() => {
-    const loadMeals = async () => {
-      const response = await axios.get(
-        `https://www.themealdb.com/api/json/v1/1/search.php?s=`
-      );
-      setMeals(response.data.meals);
-    };
     loadMeals();
   }, []);
 
@@ -24,25 +25,13 @@ function AutoComplete() {
     setSuggestions([]);
   };
 
-  const onChangeHandler = (text) => {
-    let matches = []; // tableau de correspondances vide
-    if (text.length > 0) {
-      matches = meals.filter((meal) => {
-        //  meals  -> tableau reçu de l'API
-        const regex = new RegExp(`${text}`, "gi"); // gi -> regex annule case sensitive
-        return meal.strMeal.match(regex);
-      });
-    }
-    setSuggestions(matches);
-    setText(text);
-  };
   return (
     <div className="inputt">
       <h2>Auto-completion exemple :</h2>
       <input
         type="text"
         className="searchInput"
-        onChange={(event) => onChangeHandler(event.target.value)}
+        onChange={(event) => setText(event.target.value)}
         value={text}
         onBlur={() => {
           // cacher suggestions
@@ -51,15 +40,21 @@ function AutoComplete() {
           }, 100);
         }}
       />
-      {suggestions.map((suggestions) => (
-        <div
-          key={suggestions.i}
-          className="suggestion"
-          onClick={() => onSuggestionHandler(suggestions.strMeal)}
-        >
-          {suggestions.strMeal}
-        </div>
-      ))}
+      {text === ""
+        ? ""
+        : meals
+            .filter((meal) =>
+              meal.strMeal.toUpperCase().includes(text.toUpperCase())
+            )
+            .map((suggestions) => (
+              <div
+                key={suggestions.i}
+                className="suggestion"
+                onClick={() => onSuggestionHandler(suggestions.strMeal)}
+              >
+                {suggestions.strMeal}
+              </div>
+            ))}
     </div>
   );
 }
