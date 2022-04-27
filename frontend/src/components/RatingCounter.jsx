@@ -13,7 +13,7 @@ export default function Stars() {
   return (
     <Rating
       fillColor="#F72585"
-      tooltipArray={["dégueu", "mouais", "ça passe", "j'adore", "orgasmique"]}
+      tooltipArray={["mauvais", "bof", "ça passe", "j'adore", "orgasmique"]}
       transition
       showTooltip
       onClick={handleRating}

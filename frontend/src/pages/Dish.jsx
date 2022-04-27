@@ -5,9 +5,7 @@ import "../css/Dish.css";
 
 function Dish() {
   const [dishName, setDishName] = useState("");
-  console.warn(dishName);
   const [dish, setDish] = useState([]);
-
   const getDish = () => {
     if (dishName.length > 0) {
       axios
@@ -18,9 +16,6 @@ function Dish() {
         });
     }
   };
-
-  console.warn(dish);
-
   return (
     <div className="PageDish">
       <form action="">
@@ -48,5 +43,3 @@ function Dish() {
 }
 
 export default Dish;
-// www.themealdb.com/api/json/v1/1/categories.php
-// www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata

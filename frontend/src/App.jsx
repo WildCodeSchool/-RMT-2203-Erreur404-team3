@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import DishesList from "./pages/DishesList";
 import DishesInfos from "./pages/DishesInfos";
-
+import About from "./pages/About";
 import "./App.css";
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="disheslist" element={<DishesList />} />
           <Route path="dishesinfos" element={<DishesInfos />} />
+          <Route path="about" element={<About />} />
         </Routes>
       </div>
     </Router>
