@@ -3,10 +3,12 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 // eslint-disable-next-line import/no-unresolved
+import Ingredient from "@pages/Ingredient";
 import Home from "./pages/Home";
 import Geo from "./pages/Geo";
 import DishesList from "./pages/DishesList";
 import DishesInfos from "./pages/DishesInfos";
+// import Ingredient from "./pages/Ingredient";
 import "./App.css";
 
 function App() {
@@ -27,6 +29,9 @@ function App() {
             <li>
               <Link to="geo">Localisation</Link>
             </li>
+            <li>
+              <Link to="ingredient">Je donne</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -34,6 +39,7 @@ function App() {
           <Route path="/disheslist" element={<DishesList />} />
           <Route path="/dishesinfos" element={<DishesInfos />} />
           <Route path="/geo" element={<Geo />} />
+          <Route path="/ingredient" element={<Ingredient />} />
         </Routes>
       </div>
     </Router>

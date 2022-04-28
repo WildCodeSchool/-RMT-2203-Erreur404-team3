@@ -99,6 +99,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
+  margin: 1%;
 }
 
 .composent-button-link {
@@ -174,6 +175,8 @@ a.composent-button-link {
   font-size: large;
   justify-content: center;
   display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .floatting-text {
@@ -207,11 +210,6 @@ a.composent-button-link {
 
 /*Les titres et textes*/
 
-
- #map {
-  height: 100%;
-}
-
 .input-localisation {
   font-family: var(--text-main-font);
   font-size:  1rem;
@@ -230,8 +228,377 @@ h1 {
 
 p {
   font-family: var(--text-main-font);
-  font-size:  0.9rem;
+  font-size:  1rem;
   justify-content: center;
   display: flex;
-  margin-top: 8%;
+  margin: 3%;
+  text-align: center;
 }
+
+#button-div-map {
+  margin-top: 105%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+}
+
+
+element.style {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+}
+
+/* =========================================
+
+First-Button 
+
+========================================= */
+
+.first-button {
+  background: white;
+}
+
+/* button-wrapper */
+.button-1-contents-wrapper {
+  position: relative;
+  margin: 125px auto;
+  width: 250px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+/* donate-button */
+.donate-button {
+  position: relative;
+  width: 250px;
+  height: 60px;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  z-index: 1;
+  border-radius: 25px;
+  background: linear-gradient( 90deg, #cbf7f0, #f9a881);
+}
+
+.donate-button:active, .donate-button:hover {
+  background: white;
+  color: teal;
+  border-color: teal;
+}
+
+.preselected-donation-option {
+  position: absolute;
+  z-index: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 5px auto;
+  text-align: left;
+  padding-top: 10px;
+  font-size: 20px;
+  transition: translateY, 0.4s ease;
+}
+
+.option-1 {
+  background-color: #cbf7f0;
+  right: 75%;
+  padding-left: 7px;
+}
+.option-1:active, .option-1:hover {
+  transform: translateY(-75px);
+}
+
+.option-2:active, .option-2:hover {
+  background-color: #DFD6C2;
+  right: 25%;
+  padding-left: 7px;
+  transition-delay: 0.1s;
+}
+.option-2.moved:active, .option-2.moved:hover {
+  transform: translateY(-75px);
+}
+
+.option-3 {
+  background-color: #eebb9c;
+  left: 25%;
+  padding-left: 2px;
+  transition-delay: 0.2s;
+}
+.option-3.moved:active, .option-3.move:hover {
+  transform: translateY(-75px);
+}
+
+.option-4 {
+  background-color: #f9a881;
+  left: 75%;
+  padding-left: 2px;
+  transition-delay: 0.3s;
+}
+.option-4.moved {
+  transform: translateY(-75px);
+}
+
+.option-other {
+  background-color: #fba47c;
+  width: 150px;
+  left: 0;
+  right: 0;
+  margin: 5px auto;
+  text-align: center;
+  border-radius: 25px;
+  transition-delay: 0.3s;
+}
+.option-other.moved {
+  transform: translateY( 75px );
+}
+
+
+/* =========================================
+
+Second-Button 
+
+========================================= */
+
+.second-button {
+  background: linear-gradient( 0deg, #3788e0, #0d2679);
+}
+
+/* button-wrapper */
+.button-2-contents-wrapper {
+  position: relative;
+  margin: 125px auto;
+  width: 250px;
+  text-align: center;
+  border-radius: 25px;
+ }
+
+.donate-button-2 {
+  position: relative;
+  width: 250px;
+  height: 60px;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 1px;
+  z-index: 1;
+  border-radius: 25px;
+  background: white;
+/*   background: linear-gradient( 0deg, blue, teal); */
+}
+.donate-button-2:active, .donate-button-2:hover {
+  position: absolute;
+  width: 60px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 0;
+  z-index: 1;
+  opacity: 0;
+  border-radius: 100%;
+  transition: width, opacity;
+  transition-duration: 0.1s, 0.75s;
+}
+
+.registered-checkmark {
+  position: relative;
+  color: white;
+  opacity: 0;
+  z-index: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 5px auto;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 40px;
+}
+.registered-checkmark.spin {
+  opacity: 1;
+  transition: transform 0.5s;
+  transform: rotate(1080deg) ;
+}
+
+.confirmation-text {
+  opacity: 0;
+  height: 0;
+  font-size: 24px;
+  color: white;
+  transform: scale(0);
+}
+.confirmation-text.visible {
+  opacity: 1;
+  height: 100%;
+  font-size: 24px;
+  background: transparent;
+  transition: transform 1s;
+  transform: scale(1.2);
+}
+
+.ingredient-button-div {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.ingredient {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+}
+
+.dish-match {
+  box-shadow: inset 4px 8px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 15%;
+  border: var(--main-purple-color) solid 1px;
+  background: var(--main-white-color);
+  width: 10.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0.1rem;
+  font-family: var(--title-font);
+  pointer-events: fill;
+  font-size: medium;
+}
+
+.dish-match:hover{
+  background: rgb(168, 50, 189);
+  cursor: pointer;
+  color: rgb(255, 184, 52);
+  font-weight: bold;
+  font-size: large;
+}
+
+.container-ingredient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+}
+
+.form-ingredient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+}
+
+.autocomplete-dropdown-container {
+  box-shadow: inset 4px 8px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 15%;
+  border: var(--main-purple-color) solid 1px;
+  width: 21rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0.1rem;
+  font-family: var(--title-font);
+  pointer-events: fill;
+  font-size: medium;
+}
+
+.autocomplete-dropdown-container:hover{
+  cursor: pointer;
+}
+
+.dish-match-after {
+  box-shadow: inset 4px 8px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 15%;
+  border: var(--main-purple-color) solid 1px;
+  background: var(--main-white-color);
+  width: 10.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0.1rem;
+  font-family: var(--title-main-font);
+  pointer-events: fill;
+  font-size: medium;
+}
+
+.dish-match-after:hover {
+  background: rgb(168, 50, 189);
+  cursor: pointer;
+  color: rgb(255, 184, 52);
+  font-weight: bold;
+  font-size: large;
+}
+
+.dish-info-ingredient-title {
+  font-size: large;
+  font-weight: bold;
+  font-family: var(--title-main-font);
+}
+
+.dish-info-ingredient-img {
+  width: 100%;
+  height: 10%;
+  object-fit: cover;
+}
+
+#defaultNumbers {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  flex-direction: row;
+  width: 10%;
+  height: 10%;
+}
+
+.ingredient-input {
+  font-size: medium;
+  font-weight: bold;
+  font-family: var(--title-main-font);
+  width: 100%;
+  text-align: center;
+  border-radius: 10%;
+  height: 80%;
+}
+
+.div-ingredient-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+}
+
+.comment-ingredient-input {
+  font-size: medium;
+  font-weight: bold;
+  font-family: var(--title-font);
+  width: 90%;
+  text-align: center;
+  border-radius: 5%;
+  height: 5rem;
+  margin-bottom: 5%;
+}
+
+
+
+
+
+
+
+

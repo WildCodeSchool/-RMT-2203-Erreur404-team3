@@ -1,16 +1,10 @@
 /* eslint-disable import/no-named-as-default */
 import React from "react";
 
-import FloattingTitle from "../components/FloattingTitle";
-import RatingCounter from "../components/RatingCounter";
+import DonatingButton from "../components/DonatingButton";
 
 function About() {
-  return (
-    <>
-      <FloattingTitle />
-      <RatingCounter />
-    </>
-  );
+  return <DonatingButton />;
 }
 
 export default About;
