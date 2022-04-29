@@ -104,7 +104,9 @@ function GetRecipes() {
                 alt={meal.strMeal}
               />
             </div>
-            <FloattingText text="Choisissez la quantité à offir :" />
+            <p className="title-ingredient-input">
+              Choisissez la quantité à offir :
+            </p>
             <div className="div-ingredient-input">
               <input
                 className="ingredient-input"

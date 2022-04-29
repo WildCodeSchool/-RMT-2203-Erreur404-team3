@@ -7,7 +7,7 @@ function Ingredient() {
     <div className="ingredient">
       <GetRecipes />
       <div className="ingredient-button-div">
-        <Button link="/geo" text="J'offre !" />
+        <Button link="/" text="J'offre !" />
       </div>
     </div>
   );
