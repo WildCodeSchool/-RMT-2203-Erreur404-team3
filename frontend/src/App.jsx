@@ -1,6 +1,6 @@
 /* eslint-disable import/no-named-as-default-member */
 /* eslint-disable import/no-named-as-default */
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // eslint-disable-next-line import/no-unresolved
 import Ingredient from "@pages/Ingredient";
@@ -15,25 +15,6 @@ function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="disheslist">Dishes List</Link>
-            </li>
-            <li>
-              <Link to="dishesinfos">Dishes Infos</Link>
-            </li>
-            <li>
-              <Link to="geo">Localisation</Link>
-            </li>
-            <li>
-              <Link to="ingredient">Je donne</Link>
-            </li>
-          </ul>
-        </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/disheslist" element={<DishesList />} />

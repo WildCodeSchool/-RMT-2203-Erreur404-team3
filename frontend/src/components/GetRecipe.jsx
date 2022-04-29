@@ -12,7 +12,6 @@ function GetRecipes() {
   const [data, setData] = React.useState([]);
   const [dishMatch, setDishMatch] = React.useState("");
   const [search, setSearch] = React.useState("");
-  const [isButtonClicked, setIsButtonClicked] = React.useState(false);
   const [getButtonData, setGetButtonData] = React.useState("");
   const [mealData, setMealData] = React.useState([]);
 
@@ -56,6 +55,9 @@ function GetRecipes() {
   if (getButtonData === "") {
     return (
       <div>
+        <div className="logo-get-recipte">
+          <Logos />
+        </div>
         <FloattingTitle title="Que souhaites-tu offrir ?" />
         <div className="container-ingredient">
           <form className="form-ingredient">
@@ -71,7 +73,6 @@ function GetRecipes() {
                 dishMatch.map((dish, index) => (
                   <div key={index}>
                     <button
-                      checked={isButtonClicked}
                       name="button-choice"
                       type="button"
                       id={index}
@@ -85,7 +86,6 @@ function GetRecipes() {
                 ))}
             </label>
           </form>
-          <Logos />
         </div>
       </div>
     );

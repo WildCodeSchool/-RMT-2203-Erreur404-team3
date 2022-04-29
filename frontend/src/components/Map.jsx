@@ -84,17 +84,7 @@ class MapContainer extends Component {
               />
               <div className="autocomplete-dropdown-container">
                 {loading && (
-                  <div
-                    style={{
-                      width: "94%",
-                      height: "50%",
-                      margin: "1%",
-                      position: "absolute",
-                      display: "flex",
-                    }}
-                  >
-                    Loading...
-                  </div>
+                  <div style={{ fontFamily: "arial" }}>Loading...</div>
                 )}
                 {suggestions.map((suggestion) => {
                   const className = suggestion.active
@@ -102,8 +92,20 @@ class MapContainer extends Component {
                     : "suggestion-item";
                   // inline style for demonstration purpose
                   const style = suggestion.active
-                    ? { backgroundColor: "#fcf6bdff", cursor: "grab" }
-                    : { backgroundColor: "#fcf6bdff", cursor: "grab" };
+                    ? {
+                        backgroundColor: "none",
+                        cursor: "grab",
+                        color: "#000",
+                        width: "80%",
+                        height: "80%",
+                      }
+                    : {
+                        backgroundColor: "none",
+                        cursor: "grab",
+                        color: "#000",
+                        width: "80%",
+                        height: "80%",
+                      };
                   return (
                     <div
                       style={{
@@ -112,6 +114,8 @@ class MapContainer extends Component {
                         margin: "1%",
                         position: "absolute",
                         display: "flex",
+                        fontFamily: "Petemoss",
+                        fontSize: "1.5rem",
                       }}
                       {...getSuggestionItemProps(suggestion, {
                         className,
@@ -142,6 +146,7 @@ class MapContainer extends Component {
               margin: "1%",
               position: "absolute",
               display: "flex",
+              border: "1px solid black",
             }}
             defaultOptions={{
               disableDefaultStyles: true,
