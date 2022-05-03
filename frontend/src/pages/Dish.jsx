@@ -35,7 +35,7 @@ function Dish() {
       </form>
 
       {console.warn(`dish = ${dish}`)}
-      
+
       <button type="button" onClick={getDish}>
         GET DISH
       </button>
