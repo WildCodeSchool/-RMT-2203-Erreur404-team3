@@ -18,7 +18,6 @@ function LittleBubbles() {
       ball.style.transform = `scale(${Math.random()})`;
       ball.style.width = `${Math.random()}em`;
       ball.style.height = ball.style.width;
-
       balls.push(ball);
       document.body.append(ball);
     }

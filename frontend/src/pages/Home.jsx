@@ -1,14 +1,14 @@
 import React from "react";
 import LittleBubbles from "../components/LittleBubbles";
-// import Logos from "../components/Logos";
+import Logos from "../components/Logos";
 import Button from "../components/Button";
 import FloattingText from "../components/FloattingText";
 import FloattingTitle from "../components/FloattingTitle";
 
-export default function Home() {
+function Home() {
   return (
     <div className="home">
-      {/* <Logos /> */}
+      <Logos />
       <LittleBubbles />
       <FloattingTitle title="Adopte un reste, c'est quoi ?" />
       <FloattingText
@@ -24,3 +24,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
