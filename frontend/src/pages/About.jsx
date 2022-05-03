@@ -5,8 +5,12 @@ import FloattingText from "../components/FloattingText";
 import DonatingButton from "../components/DonatingButton";
 import RatingCounter from "../components/RatingCounter";
 
+import FloattingTitle from "../components/FloattingTitle";
+import RatingCounter from "../components/RatingCounter";
+
 function About() {
   return (
+
     <div className="about">
       {/* small logo */}
       <LittleBubbles />

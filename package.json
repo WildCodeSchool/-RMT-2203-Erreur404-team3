@@ -29,6 +29,7 @@
     "google-maps-react": "^2.0.6",
     "react-places-autocomplete": "^7.3.0",
     "react-router-dom": "^6.3.0",
-    "react-simple-star-rating": "^4.0.5"
+    "react-simple-star-rating": "^4.0.5",
+    "axios": "^0.26.1"
   }
 }
