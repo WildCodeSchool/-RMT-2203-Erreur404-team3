@@ -5,7 +5,6 @@ import "../css/Dish.css";
 
 function Dish() {
   const [dishName, setDishName] = useState("");
-  console.warn(dishName);
   const [dish, setDish] = useState([]);
 
   const getDish = () => {
@@ -13,29 +12,22 @@ function Dish() {
       axios
         .get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dishName}`)
         .then((res) => {
-          console.warn(res.data);
           setDish(res.data.meals);
         });
     }
   };
-
-  console.warn(dish);
-
   return (
     <div className="PageDish">
       <form action="">
-        <label htmlFor="a">
+        <label htmlFor="dishName">
           <input
             type="text"
-            id="a"
+            id="dishName"
             value={dishName}
             onChange={(event) => setDishName(event.target.value)}
           />
         </label>
       </form>
-
-      {console.warn(`dish = ${dish}`)}
-      
       <button type="button" onClick={getDish}>
         GET DISH
       </button>
