@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Geo from "./pages/Geo";
 import DishesList from "./pages/DishesList";
 import DishesInfos from "./pages/DishesInfos";
+import DisplayIngredient from "./pages/DisplayIngredient";
+import Ingredient from "./pages/Ingredient";
 
 import "./App.css";
 
@@ -33,6 +35,11 @@ function App() {
           <Route path="/disheslist" element={<DishesList />} />
           <Route path="/dishesinfos" element={<DishesInfos />} />
           <Route path="/geo" element={<Geo />} />
+          <Route
+            path="/displayingredient/:recipe"
+            element={<DisplayIngredient />}
+          />
+          <Route path="/ingredient" element={<Ingredient />} />
         </Routes>
       </div>
     </Router>
