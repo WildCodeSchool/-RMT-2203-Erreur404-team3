@@ -236,6 +236,8 @@ a.composent-button-link {
   justify-content: center;
   display: flex;
   flex-direction: column;
+  width: 90%;
+  margin-left: 5%;
 }
 
 h1 {
@@ -343,6 +345,7 @@ p {
     font-family: var(--title-font);
     pointer-events: fill;
     font-size: medium;
+    border: none;
   }
   
   .autocomplete-dropdown-container:hover{
