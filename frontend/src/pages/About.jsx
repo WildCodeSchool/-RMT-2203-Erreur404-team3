@@ -3,6 +3,7 @@ import React from "react";
 import LittleBubbles from "../components/LittleBubbles";
 import FloattingTitle from "../components/FloattingTitle";
 import FloattingText from "../components/FloattingText";
+import DonatingButton from "../components/DonatingButton";
 
 function About() {
   return (
@@ -17,7 +18,7 @@ function About() {
       />
       <div>{/* composant newslatter */}</div>
       <div>
-        <FloattingTitle title="Laissez-nous une petite note" />
+        <DonatingButton />
       </div>
     </div>
   );

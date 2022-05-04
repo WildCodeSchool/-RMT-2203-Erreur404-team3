@@ -8,6 +8,7 @@ import DishesInfos from "./pages/DishesInfos";
 import Chat from "./pages/ChatPage";
 import DisplayIngredient from "./pages/DisplayIngredient";
 import Ingredient from "./pages/Ingredient";
+import About from "./pages/About";
 
 import "./App.css";
 
@@ -29,6 +30,9 @@ function App() {
             <li>
               <Link to="geo">Localisation</Link>
             </li>
+            <li>
+              <Link to="about">A Propos</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -42,6 +46,7 @@ function App() {
             element={<DisplayIngredient />}
           />
           <Route path="/ingredient" element={<Ingredient />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </Router>
