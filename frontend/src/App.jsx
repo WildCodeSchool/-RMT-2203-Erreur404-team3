@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // eslint-disable-next-line import/no-unresolved
 import Home from "./pages/Home";
@@ -9,39 +9,23 @@ import Chat from "./pages/ChatPage";
 import DisplayIngredient from "./pages/DisplayIngredient";
 import Ingredient from "./pages/Ingredient";
 
-
 import "./App.css";
 
 function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="disheslist">Dishes List</Link>
-            </li>
-            <li>
-              <Link to="dishesinfos">Dishes Infos</Link>
-            </li>
-            <li>
-              <Link to="geo">Localisation</Link>
-            </li>
-          </ul>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/disheslist" element={<DishesList />} />
-          <Route path="/dishesinfos" element={<DishesInfos />} />
-          <Route path="/geo" element={<Geo />} />
-          <Route path="/chat" element={<Chat />} />
-          <Route path="/displayingredient/:recipe" element={<DisplayIngredient />}/>
-          <Route path="/ingredient" element={<Ingredient />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/disheslist" element={<DishesList />} />
+        <Route path="/dishesinfos" element={<DishesInfos />} />
+        <Route path="/geo" element={<Geo />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route
+          path="/displayingredient/:recipe"
+          element={<DisplayIngredient />}
+        />
+        <Route path="/ingredient" element={<Ingredient />} />
+      </Routes>
     </Router>
   );
 }
