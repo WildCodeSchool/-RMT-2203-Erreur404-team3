@@ -1,11 +1,11 @@
 import React from "react";
-import GetRecipes from "../components/GetRecipe";
+import DisplayRecipe from "../components/DisplayRecipe";
 import Button from "../components/Button";
 
-function Ingredient() {
+function DisplayIngredient() {
   return (
     <div className="ingredient">
-      <GetRecipes />
+      <DisplayRecipe />
       <div className="ingredient-button-div">
         <Button link="/" text="J'offre !" />
       </div>
@@ -13,4 +13,4 @@ function Ingredient() {
   );
 }
 
-export default Ingredient;
+export default DisplayIngredient;
