@@ -6,6 +6,9 @@ import Geo from "./pages/Geo";
 import DishesList from "./pages/DishesList";
 import DishesInfos from "./pages/DishesInfos";
 import Chat from "./pages/ChatPage";
+import DisplayIngredient from "./pages/DisplayIngredient";
+import Ingredient from "./pages/Ingredient";
+
 
 import "./App.css";
 
@@ -27,9 +30,6 @@ function App() {
             <li>
               <Link to="geo">Localisation</Link>
             </li>
-            <li>
-              <Link to="chat">Localisation</Link>
-            </li>
           </ul>
         </nav>
         <Routes>
@@ -38,6 +38,8 @@ function App() {
           <Route path="/dishesinfos" element={<DishesInfos />} />
           <Route path="/geo" element={<Geo />} />
           <Route path="/chat" element={<Chat />} />
+          <Route path="/displayingredient/:recipe" element={<DisplayIngredient />}/>
+          <Route path="/ingredient" element={<Ingredient />} />
         </Routes>
       </div>
     </Router>
