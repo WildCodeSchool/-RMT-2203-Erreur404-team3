@@ -9,7 +9,6 @@ import Chat from "./pages/ChatPage";
 import DisplayIngredient from "./pages/DisplayIngredient";
 import Ingredient from "./pages/Ingredient";
 
-
 import "./App.css";
 
 function App() {
@@ -38,7 +37,10 @@ function App() {
           <Route path="/dishesinfos" element={<DishesInfos />} />
           <Route path="/geo" element={<Geo />} />
           <Route path="/chat" element={<Chat />} />
-          <Route path="/displayingredient/:recipe" element={<DisplayIngredient />}/>
+          <Route
+            path="/displayingredient/:recipe"
+            element={<DisplayIngredient />}
+          />
           <Route path="/ingredient" element={<Ingredient />} />
         </Routes>
       </div>
