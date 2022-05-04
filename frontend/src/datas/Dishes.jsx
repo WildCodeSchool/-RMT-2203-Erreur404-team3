@@ -6,7 +6,7 @@ const dishes = [
       alt: "illustration de salade",
     },
     distance: 1200,
-    allergene: ["lactose", "cacahuète"],
+    ingredients: ["lactose", "cacahuète"],
     description: "ceci est un gaspacho",
   },
   {
@@ -16,7 +16,7 @@ const dishes = [
       alt: "illustration de spaghettis",
     },
     distance: 150,
-    allergene: ["oeufs", "farine de blé"],
+    ingredients: ["oeufs", "farine de blé"],
     description: "voici des lasagnes",
   },
   {
