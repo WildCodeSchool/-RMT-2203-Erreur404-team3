@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../css/Dish.css";
+import "../css/DishInfo.css";
 
 function DishInfo({ dish }) {
   return (
