@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function FloattingText({ props }) {
-  return <p>Lorem ipsum {props.text}</p>;
+export default function FloattingText({ text }) {
+  return <p>Lorem ipsum {text}</p>;
 }
