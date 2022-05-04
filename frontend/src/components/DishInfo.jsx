@@ -1,16 +1,37 @@
 import React from "react";
 
+import "../css/Dish.css";
+
 function DishInfo({ dish }) {
   return (
     <div className="dishInfo-container">
-      <h2>{dish.itemName}</h2>
-      <h3>Allergènes</h3>
-      <p>{dish.allergene}</p>
-      <h3>Description</h3>
-      <p>{dish.description}</p>
-      <button className="dishInfoButton" type="button">
-        Choisir ce plat
-      </button>
+      <section className="DI-back">
+        <img src={dish.image.src} alt={dish.image.alt} />
+      </section>
+
+      <section className="DI-front">
+        <span>BACK</span>
+
+        <h2>{dish.itemName}</h2>
+
+        <article className="DI-allergenes">
+          <h3>Ingredients</h3>
+          <div>
+            {dish.ingredients.map((ingredient) => (
+              <p>{ingredient}</p>
+            ))}
+          </div>
+        </article>
+
+        <article className="DI-description">
+          <h3>Description</h3>
+          <p>{dish.description}</p>
+        </article>
+
+        <button className="dishInfoButton" type="button">
+          Choisir ce plat
+        </button>
+      </section>
     </div>
   );
 }
