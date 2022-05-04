@@ -61,3 +61,20 @@ ALTER TABLE `item`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE `dishlist` (
+  `id` int(11) UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT, 
+  `userfirstname` varchar(255) NULL,
+  `userlastname` varchar(255) NULL,
+  `userlemail` varchar(255) NULL,
+  `userlocation` varchar(255) NULL,
+  `userschatid` varchar(255) NULL,
+  `dishname` varchar(255) NULL,
+  `dishrate` varchar(255) NULL,
+  `dishimage` varchar(255) NULL,
+  `dishcomment` varchar(255) NULL,
+  `dishnumber` varchar(255) NULL,
+  `dishingredient1` varchar(255) NULL,
+  `dishingredient2` varchar(255) NULL,
+  `dishingredient3` varchar(255) NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
