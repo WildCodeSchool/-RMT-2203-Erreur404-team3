@@ -36,6 +36,8 @@ class MapContainer extends Component {
       .then((latLng) => {
         this.setState({ address });
         this.setState({ mapCenter: latLng });
+        const userLocation = `${address} Lat : ${latLng.lat} Long : ${latLng.lng}`;
+        console.warn("The user location is : ", userLocation);
       })
       .catch((error) => console.error("Error", error));
   };
@@ -44,6 +46,25 @@ class MapContainer extends Component {
     return (
       <div id="googleMap">
         <PlacesAutocomplete
+          style={{
+            width: "97%",
+            height: "80%",
+            margin: "1%",
+            position: "absolute",
+          }}
+          defaultOptions={{
+            disableDefaultStyles: true,
+            disableDefaultUI: true, // disable default map UI
+            draggable: true, // make map draggable
+            keyboardShortcuts: false, // disable keyboard shortcuts
+            scaleControl: true, // allow scale controle
+            scrollwheel: true, // allow scroll wheel
+            styles: {
+              color: "#000",
+              width: "80%",
+              height: "80%",
+            },
+          }}
           value={this.state.address}
           onChange={this.handleChange}
           onSelect={this.handleSelect}
@@ -62,17 +83,40 @@ class MapContainer extends Component {
                 })}
               />
               <div className="autocomplete-dropdown-container">
-                {loading && <div>Loading...</div>}
+                {loading && (
+                  <div style={{ fontFamily: "arial" }}>Loading...</div>
+                )}
                 {suggestions.map((suggestion) => {
                   const className = suggestion.active
                     ? "suggestion-item--active"
                     : "suggestion-item";
                   // inline style for demonstration purpose
                   const style = suggestion.active
-                    ? { backgroundColor: "#fcf6bdff", cursor: "grab" }
-                    : { backgroundColor: "#fcf6bdff", cursor: "grab" };
+                    ? {
+                        backgroundColor: "none",
+                        cursor: "grab",
+                        color: "#000",
+                        width: "80%",
+                        height: "80%",
+                      }
+                    : {
+                        backgroundColor: "none",
+                        cursor: "grab",
+                        color: "#000",
+                        width: "80%",
+                        height: "80%",
+                      };
                   return (
                     <div
+                      style={{
+                        width: "94%",
+                        height: "50%",
+                        margin: "1%",
+                        position: "absolute",
+                        display: "flex",
+                        fontFamily: "Petemoss",
+                        fontSize: "1.5rem",
+                      }}
                       {...getSuggestionItemProps(suggestion, {
                         className,
                         style,
@@ -86,29 +130,73 @@ class MapContainer extends Component {
             </div>
           )}
         </PlacesAutocomplete>
-        <Map
-          google={this.props.google}
-          initialCenter={{
-            lat: this.state.mapCenter.lat,
-            lng: this.state.mapCenter.lng,
-          }}
-          center={{
-            lat: this.state.mapCenter.lat,
-            lng: this.state.mapCenter.lng,
+        <div
+          style={{
+            width: "94%",
+            height: "60%",
+            margin: "1%",
+            position: "absolute",
+            display: "flex",
           }}
         >
-          <Marker
-            position={{
+          <Map
+            style={{
+              width: "99%",
+              height: "80%",
+              margin: "5%",
+              position: "absolute",
+              display: "flex",
+              border: "1px solid black",
+            }}
+            defaultOptions={{
+              disableDefaultStyles: true,
+              disableDefaultUI: true, // disable default map UI
+              draggable: true, // make map draggable
+              keyboardShortcuts: false, // disable keyboard shortcuts
+              scaleControl: true, // allow scale controle
+              scrollwheel: true, // allow scroll wheel
+              styles: {
+                color: "#000",
+                width: "80%",
+                height: "80%",
+              },
+            }}
+            google={this.props.google}
+            initialCenter={{
               lat: this.state.mapCenter.lat,
               lng: this.state.mapCenter.lng,
             }}
-          />
-        </Map>
+            center={{
+              lat: this.state.mapCenter.lat,
+              lng: this.state.mapCenter.lng,
+            }}
+          >
+            <Marker
+              defaultOptions={{
+                disableDefaultStyles: true,
+                disableDefaultUI: true, // disable default map UI
+                draggable: true, // make map draggable
+                keyboardShortcuts: false, // disable keyboard shortcuts
+                scaleControl: true, // allow scale controle
+                scrollwheel: true, // allow scroll wheel
+                styles: {
+                  color: "#000",
+                  width: "80%",
+                  height: "80%",
+                },
+              }}
+              position={{
+                lat: this.state.mapCenter.lat,
+                lng: this.state.mapCenter.lng,
+              }}
+            />
+          </Map>
+        </div>
       </div>
     );
   }
 }
 
 export default GoogleApiWrapper({
-  apiKey: import.meta.env.GOOGLE_MAPS_API_KEY,
+  apiKey: import.meta.env.VITE_GOOGLE_MAP_KEY,
 })(MapContainer);
