@@ -18,7 +18,6 @@ export default function DonatingButton() {
             >
               Contribuer
             </button>
-
             <div
               className={
                 isActive
@@ -28,7 +27,6 @@ export default function DonatingButton() {
             >
               0.50€
             </div>
-
             <div
               className={
                 isActive
@@ -37,8 +35,7 @@ export default function DonatingButton() {
               }
             >
               1€
-            </div>
-
+            </di>
             <div
               className={
                 isActive
@@ -48,7 +45,6 @@ export default function DonatingButton() {
             >
               2€
             </div>
-
             <div
               className={
                 isActive
@@ -58,7 +54,6 @@ export default function DonatingButton() {
             >
               5€
             </div>
-
             <div
               className={
                 isActive
@@ -72,6 +67,5 @@ export default function DonatingButton() {
         </div>
       </div>
     </div>
-    // container-fluid
   );
 }
