@@ -8,6 +8,7 @@ import DishesInfos from "./pages/DishesInfos";
 import Chat from "./pages/ChatPage";
 import DisplayIngredient from "./pages/DisplayIngredient";
 import Ingredient from "./pages/Ingredient";
+import About from "./pages/About";
 
 import "./App.css";
 
@@ -25,6 +26,7 @@ function App() {
           element={<DisplayIngredient />}
         />
         <Route path="/ingredient" element={<Ingredient />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );
