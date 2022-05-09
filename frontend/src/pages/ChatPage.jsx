@@ -2,6 +2,7 @@ import "../App.css";
 import io from "socket.io-client";
 import { useState } from "react";
 import Chat from "../components/Chat";
+import Button from "../components/Button";
 
 const socket = io.connect("http://localhost:3001");
 
@@ -45,6 +46,7 @@ function Chatpage() {
       ) : (
         <Chat socket={socket} username={userName} room={room} />
       )}
+      <Button link="/validation" text="C'est bon" />
     </div>
   );
 }
