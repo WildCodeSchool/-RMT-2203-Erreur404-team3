@@ -44,9 +44,11 @@ function Chatpage() {
           </button>
         </div>
       ) : (
-        <Chat socket={socket} username={userName} room={room} />
+        <>
+          <Chat socket={socket} username={userName} room={room} />
+          <Button link="/validation" text="C'est bon" />
+        </>
       )}
-      <Button link="/validation" text="C'est bon" />
     </div>
   );
 }
