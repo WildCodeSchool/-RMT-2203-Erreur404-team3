@@ -3,7 +3,7 @@ import GoogleMap from "../components/Map";
 import Button from "../components/Button";
 import Logos from "../components/Logos";
 
-function Geo() {
+function GeoGive() {
   return (
     <>
       <div className="geo">
@@ -17,10 +17,9 @@ function Geo() {
       </div>
       <div id="button-div-map">
         <Button link="/ingredient" text="Je propose mon reste" />
-        <Button link="/ingredient" text="Je prends mon reste" />
       </div>
     </>
   );
 }
 
-export default Geo;
+export default GeoGive;

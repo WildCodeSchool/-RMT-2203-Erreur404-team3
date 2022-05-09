@@ -3,13 +3,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // eslint-disable-next-line import/no-unresolved
 import Home from "./pages/Home";
 import Geo from "./pages/Geo";
+import GeoTake from "./pages/GeoTake";
+import GeoGive from "./pages/GeoGive";
 import DishesList from "./pages/DishesList";
 import DishesInfos from "./pages/DishesInfos";
 import Chatpage from "./pages/ChatPage";
 import DisplayIngredient from "./pages/DisplayIngredient";
 import Ingredient from "./pages/Ingredient";
 import About from "./pages/About";
-
+import ValidationPage from "./pages/Validationpage";
 import "./App.css";
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
           <Route path="/disheslist" element={<DishesList />} />
           <Route path="/dishesinfos" element={<DishesInfos />} />
           <Route path="/geo" element={<Geo />} />
+          <Route path="/geotake" element={<GeoTake />} />
+          <Route path="/geogive" element={<GeoGive />} />
           <Route path="/chat" element={<Chatpage />} />
           <Route
             path="/displayingredient/:recipe"
@@ -35,6 +39,7 @@ function App() {
           />
           <Route path="/ingredient" element={<Ingredient />} />
           <Route path="/about" element={<About />} />
+          <Route path="/validation" element={<ValidationPage />} />
         </Routes>
       </div>
     </Router>
