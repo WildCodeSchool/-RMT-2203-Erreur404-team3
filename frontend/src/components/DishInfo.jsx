@@ -8,8 +8,8 @@ function DishInfo({ dish }) {
       <section className="DI-back">
         <img src={dish.image.src} alt={dish.image.alt} />
       </section>
-      
       <section className="DI-front">
+        <Button link="ChatPage" text="Retour à la liste" />
         <h2>{dish.itemName}</h2>
         <article className="DI-allergenes">
           <h3>Ingredients</h3>
