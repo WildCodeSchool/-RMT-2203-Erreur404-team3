@@ -7,7 +7,7 @@ function DisplayIngredient() {
     <div className="ingredient">
       <DisplayRecipe />
       <div className="ingredient-button-div">
-        <Button link="/" text="J'offre !" />
+        <Button link="/Chat" text="J'offre !" />
       </div>
     </div>
   );
