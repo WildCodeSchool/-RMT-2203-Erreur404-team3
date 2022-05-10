@@ -8,6 +8,7 @@ import Chatpage from "./pages/ChatPage";
 import DisplayIngredient from "./pages/DisplayIngredient";
 import Ingredient from "./pages/Ingredient";
 import About from "./pages/About";
+import Validation from "./pages/Validation";
 
 import "./App.css";
 
@@ -26,6 +27,7 @@ function App() {
         />
         <Route path="/ingredient" element={<Ingredient />} />
         <Route path="/about" element={<About />} />
+        <Route path="/validation" element={<Validation />} />
       </Routes>
     </Router>
   );
