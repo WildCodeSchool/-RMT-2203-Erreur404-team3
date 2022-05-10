@@ -71,6 +71,7 @@ section {
     color: purple;
     background-color: rgb(168, 50, 189);
     z-index: 10;
+    text-align: center;
   }
 
   a.composent-button-link {
@@ -281,17 +282,13 @@ section {
 
 /* ======== Validation =========== */
 
-// .balls-container {
-//   position: relative;
-//   overflow: hidden;
-// }
-
-/* ======== Texte =========== */
-// h1,
-// p {
-//   position: relative;
-//   z-index: 0;
-// }
+.validation {
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10% 0;
+  }
+}
 
 // /*Le root et le body*/
 
