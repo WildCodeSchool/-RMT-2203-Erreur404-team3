@@ -46,11 +46,9 @@ class MapContainer extends Component {
     return (
       <div id="googleMap">
         <PlacesAutocomplete
+          className="googlePlaces"
           style={{
-            width: "97%",
-            height: "80%",
-            margin: "1%",
-            position: "absolute",
+            width: "100%",
           }}
           defaultOptions={{
             disableDefaultStyles: true,
@@ -61,8 +59,8 @@ class MapContainer extends Component {
             scrollwheel: true, // allow scroll wheel
             styles: {
               color: "#000",
-              width: "80%",
-              height: "80%",
+              // width: "80%",
+              // height: "80%",
             },
           }}
           value={this.state.address}
@@ -75,8 +73,21 @@ class MapContainer extends Component {
             getSuggestionItemProps,
             loading,
           }) => (
-            <div className="input-localisation">
+            <div
+              className="input-localisation"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                // justifyContent: "center",
+                position: "relative",
+              }}
+            >
               <input
+                style={{
+                  width: "100%",
+                  textAlign: "center",
+                  margin: "0",
+                }}
                 {...getInputProps({
                   placeholder: "Taper votre texte ici...",
                   className: "location-search-input",
@@ -96,24 +107,19 @@ class MapContainer extends Component {
                         backgroundColor: "none",
                         cursor: "grab",
                         color: "#000",
-                        width: "80%",
-                        height: "80%",
                       }
                     : {
                         backgroundColor: "none",
                         cursor: "grab",
                         color: "#000",
-                        width: "80%",
-                        height: "80%",
                       };
                   return (
                     <div
+                      className="googleSuggest"
                       style={{
-                        width: "94%",
-                        height: "50%",
-                        margin: "1%",
-                        position: "absolute",
-                        display: "flex",
+                        margin: "0",
+                        position: "relative",
+                        display: "inline",
                         fontFamily: "Petemoss",
                         fontSize: "1.5rem",
                       }}
@@ -131,22 +137,19 @@ class MapContainer extends Component {
           )}
         </PlacesAutocomplete>
         <div
+          className="googleMapContainer"
           style={{
-            width: "94%",
-            height: "60%",
-            margin: "1%",
-            position: "absolute",
-            display: "flex",
+            margin: "-15% 7%",
           }}
         >
           <Map
+            className="googleMap"
             style={{
-              width: "99%",
-              height: "80%",
-              margin: "5%",
-              position: "absolute",
-              display: "flex",
-              border: "1px solid black",
+              position: "fixed",
+              width: "100%",
+              height: "100%",
+              top: "0%",
+              left: "-33%",
             }}
             defaultOptions={{
               disableDefaultStyles: true,
@@ -157,8 +160,8 @@ class MapContainer extends Component {
               scrollwheel: true, // allow scroll wheel
               styles: {
                 color: "#000",
-                width: "80%",
-                height: "80%",
+                // width: "80%",
+                // height: "80%",
               },
             }}
             google={this.props.google}
@@ -181,8 +184,8 @@ class MapContainer extends Component {
                 scrollwheel: true, // allow scroll wheel
                 styles: {
                   color: "#000",
-                  width: "80%",
-                  height: "80%",
+                  // width: "80%",
+                  // height: "80%",
                 },
               }}
               position={{
