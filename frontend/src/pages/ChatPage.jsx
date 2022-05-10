@@ -6,7 +6,7 @@ import Button from "../components/Button";
 const socket = io.connect("http://localhost:3001");
 
 function Chatpage() {
-  const [room, setRoom] = useState("");
+  const [room] = useState("");
   const [userName, setUserName] = useState("");
   const [showChat, setShowChat] = useState(false);
 
@@ -43,5 +43,4 @@ function Chatpage() {
     </section>
   );
 }
-
 export default Chatpage;
