@@ -8,7 +8,7 @@ function Home() {
   return (
     <section className="home">
       <Button link="/about" text="À Propos" />
-      <Logos />
+      <Logos isFoodAdopted={false} />
       <FloattingTitle title="Adopte un reste, c'est quoi ?" />
       <FloattingText
         text={`Cette année plus que jamais, la générosité et la solidarité sont de mise, alors à l'action !
