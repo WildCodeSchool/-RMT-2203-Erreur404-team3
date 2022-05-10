@@ -1,9 +1,19 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import GoogleMap from "../components/Map";
 import Button from "../components/Button";
 import Logos from "../components/Logos";
 
-function Geo() {
+function GeoAction() {
+  const { action } = useParams();
+  const url = {
+    take: "/disheslist",
+    give: "/ingredient",
+  };
+  const text = {
+    take: "Je prends mon reste",
+    give: "Je donne mon reste",
+  };
   return (
     <>
       <div className="geo">
@@ -16,11 +26,10 @@ function Geo() {
         <GoogleMap />
       </div>
       <div id="button-div-map">
-        <Button link="/disheslist" text="Je propose mon reste" />
-        <Button link="/ingredient" text="Je prends mon reste" />
+        <Button link={url[action]} text={text[action]} />
       </div>
     </>
   );
 }
 
-export default Geo;
+export default GeoAction;

@@ -19,8 +19,8 @@ function Home() {
           poubelle.`}
       />
       <div className="home-button-div">
-        <Button link="/geo" text="Je prends !" />
-        <Button link="/geo" text="Je donne !" />
+        <Button link="/geo/take" text="Je prends" />
+        <Button link="/geo/give" text="Je donne" />
       </div>
     </div>
   );
