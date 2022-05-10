@@ -12,7 +12,7 @@ function Chatpage() {
   const [showChat, setShowChat] = useState(false);
 
   const joinRoom = () => {
-    if (userName !== "" && room !== "") {
+    if (userName !== "" /* && room !== "" */) {
       socket.emit("join_room", room);
       setShowChat(true);
     }
@@ -31,13 +31,13 @@ function Chatpage() {
             }}
           />
 
-          <input
+          {/* <input
             type="text"
             placeholder="Room number"
             onChange={(event) => {
               setRoom(event.target.value);
             }}
-          />
+          /> */}
           <button type="button" onClick={joinRoom}>
             {" "}
             Join room
