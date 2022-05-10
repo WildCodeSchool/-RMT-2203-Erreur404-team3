@@ -11,9 +11,10 @@ export default function ValidationPage() {
       <FloattingTitle title="Merci de votre adoption" />
       <Logos />
       <LittleBubbles />
-      <FloattingText text="Penses à bien valider lorsque tu as récupéré ton plat !" />
+      <FloattingText text="Pense à valider lorsque l'échange est terminé !" />
       <div className="Validationpage-button-div">
         <Button link="/" text="Merci de votre geste !" />
+        <FloattingText text="A bientôt !" />
       </div>
     </div>
   );
