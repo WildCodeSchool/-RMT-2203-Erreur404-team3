@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // eslint-disable-next-line import/no-unresolved
 import Home from "./pages/Home";
 import Geo from "./pages/Geo";
-import GeoTake from "./pages/GeoTake";
-import GeoGive from "./pages/GeoGive";
+import GeoAction from "./pages/GeoAction";
 import DishesList from "./pages/DishesList";
 import DishesInfos from "./pages/DishesInfos";
 import Chatpage from "./pages/ChatPage";
@@ -30,8 +29,7 @@ function App() {
           <Route path="/disheslist" element={<DishesList />} />
           <Route path="/dishesinfos" element={<DishesInfos />} />
           <Route path="/geo" element={<Geo />} />
-          <Route path="/geotake" element={<GeoTake />} />
-          <Route path="/geogive" element={<GeoGive />} />
+          <Route path="/geo/:action" element={<GeoAction />} />
           <Route path="/chat" element={<Chatpage />} />
           <Route
             path="/displayingredient/:recipe"
