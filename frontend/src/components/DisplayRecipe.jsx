@@ -1,6 +1,3 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable jsx-a11y/control-has-associated-label */
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
@@ -24,9 +21,9 @@ function DisplayRecipe() {
     <div>
       <div className="container-ingredient">
         <FloattingTitle title="Que voilà un beau reste !" />
-        {mealData.map((meal, index) => (
+        {mealData.map((meal) => (
           <>
-            <div className="dish-info-ingredient" key={index}>
+            <div className="dish-info-ingredient" key={meal.id}>
               <p className="dish-info-ingredient-title">{meal.strMeal}</p>
               <img
                 className="dish-info-ingredient-img"
@@ -44,16 +41,16 @@ function DisplayRecipe() {
                 placeholder="En portion, soit en moyenne 250g"
               />
               <datalist id="defaultNumbers">
-                <option value="1 portion" />
-                <option value="2 portions" />
-                <option value="3 portions" />
-                <option value="4 portions" />
-                <option value="5 portions" />
-                <option value="6 portions" />
-                <option value="7 portions" />
-                <option value="8 portions" />
-                <option value="9 portions" />
-                <option value="10 portions" />
+                <option value="1 portion" aria-label="1 portion" />
+                <option value="2 portions" aria-label="2 portions" />
+                <option value="3 portions" aria-label="3 portions" />
+                <option value="4 portions" aria-label="4 portions" />
+                <option value="5 portions" aria-label="5 portions" />
+                <option value="6 portions" aria-label="6 portions" />
+                <option value="7 portions" aria-label="7 portions" />
+                <option value="8 portions" aria-label="8 portions" />
+                <option value="9 portions" aria-label="9 portions" />
+                <option value="10 portions" aria-label="10 portions" />
               </datalist>
             </div>
             <div className="comment-ingredient-input">
@@ -67,7 +64,7 @@ function DisplayRecipe() {
             </div>
           </>
         ))}
-        <button type="input" className="dish-match-after">
+        <button type="submit" className="dish-match-after">
           <Link to="/ingredient">Revenir au choix du plat</Link>
         </button>
       </div>
