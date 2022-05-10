@@ -12,8 +12,8 @@ function LittleBubbles() {
       const ball = document.createElement("div");
       ball.classList.add("ball");
       ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-      ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-      ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+      ball.style.left = `${Math.floor(Math.random() * 60)}%`;
+      ball.style.top = `${Math.floor(Math.random() * 80)}%`;
       ball.style.transform = `scale(${Math.random()})`;
       ball.style.width = `${Math.random()}em`;
       ball.style.height = ball.style.width;
@@ -30,8 +30,8 @@ function LittleBubbles() {
     // Le mouvement des bulles
     balls.forEach((el, i) => {
       const to = {
-        x: Math.random() * (i % 2 === 0 ? -15 : 15),
-        y: Math.random() * 10, // pour changer la distance
+        x: Math.random() * (i % 2 === 0 ? -5 : 5),
+        y: Math.random() * 5, // pour changer la distance
       };
 
       const anim = el.animate(

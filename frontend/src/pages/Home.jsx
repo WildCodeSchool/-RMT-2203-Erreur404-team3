@@ -9,7 +9,7 @@ function Home() {
   return (
     <div className="home">
       <Button link="/about" text="À Propos" />
-      <Logos />
+      <Logos isFoodAdopted={false} />
       <LittleBubbles />
       <FloattingTitle title="Adopte un reste, c'est quoi ?" />
       <FloattingText

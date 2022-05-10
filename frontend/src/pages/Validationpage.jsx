@@ -9,7 +9,7 @@ export default function ValidationPage() {
   return (
     <div className="validation">
       <FloattingTitle title="Merci de votre adoption" />
-      <Logos />
+      <Logos isFoodAdopted />
       <LittleBubbles />
       <FloattingText text="Penses à bien valider lorsque tu as récupéré ton plat !" />
       <div className="Validationpage-button-div">
