@@ -43,5 +43,4 @@ function Chatpage() {
     </section>
   );
 }
-
 export default Chatpage;
