@@ -1,11 +1,9 @@
 /* eslint-disable import/extensions */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { useState } from "react";
 
-function Logos() {
+function Logos(isFoodAdopted) {
   // La const pour gérér le changement de logo
-  const [isFoodAdopted, setIsFoodAdopted] = useState(false);
   const img = isFoodAdopted
     ? "https://i.ibb.co/N9B781f/Merci.png"
     : "https://i.ibb.co/mG1mFSd/Adopte-un-reste.png";
@@ -14,13 +12,7 @@ function Logos() {
   return (
     // La div du logo
     <div className="composent-logo-div">
-      <img
-        onClick={() => setIsFoodAdopted(!isFoodAdopted === true)}
-        className="composent-logo"
-        src={img}
-        alt={alt}
-        border="0"
-      />
+      <img className="composent-logo" src={img} alt={alt} border="0" />
     </div>
   );
 }
