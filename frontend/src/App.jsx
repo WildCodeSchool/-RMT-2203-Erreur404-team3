@@ -10,7 +10,7 @@ import DisplayIngredient from "./pages/DisplayIngredient";
 import Ingredient from "./pages/Ingredient";
 import About from "./pages/About";
 import ValidationPage from "./pages/Validationpage";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (

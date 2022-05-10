@@ -1,5 +1,4 @@
 import React from "react";
-import LittleBubbles from "../components/LittleBubbles";
 import Logos from "../components/Logos";
 import Button from "../components/Button";
 import FloattingText from "../components/FloattingText";
@@ -7,7 +6,7 @@ import FloattingTitle from "../components/FloattingTitle";
 
 function Home() {
   return (
-    <div className="home">
+    <section className="home">
       <Button link="/about" text="À Propos" />
       <Logos isFoodAdopted={false} />
       <LittleBubbles />
@@ -22,7 +21,7 @@ function Home() {
         <Button link="/geo/take" text="Je prends" />
         <Button link="/geo/give" text="Je donne" />
       </div>
-    </div>
+    </section>
   );
 }
 
