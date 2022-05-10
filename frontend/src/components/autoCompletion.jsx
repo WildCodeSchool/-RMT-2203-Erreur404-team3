@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable no-shadow */
-import "../App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
