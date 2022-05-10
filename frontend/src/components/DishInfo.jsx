@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/DishInfo.css";
 import Button from "./Button";
 
 function DishInfo({ dish }) {
@@ -23,7 +22,7 @@ function DishInfo({ dish }) {
           <h3>Description</h3>
           <p>{dish.description}</p>
         </article>
-        <Button link="ChatPage" text="Choisir ce plat" />
+        <Button link="/chat" text="Choisir ce plat" />
       </section>
     </div>
   );

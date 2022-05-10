@@ -1,0 +1,742 @@
+// @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Luckiest+Guy&display=swap");
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+/* VARIABLES */
+:root {
+  --main-white-color: #f4fefe;
+  --main-orange-color: #fcf680;
+  --main-pink-color: #ff99c9;
+  --main-purple-color: #e4c1f9;
+  --main-black-color: #1d1d1d;
+  --title-main-font: "Gagalin", sans-serif;
+  --text-main-font: "Lato", sans-serif;
+  --title-font: "Petemoss", cursive;
+  --common-font: "Lato", sans-serif;
+  --light: #fcf6bdff;
+  --dark: #171718;
+  --primary-color: #ff99c8ff;
+  --secondary-color: #e4c1f9ff;
+  --light-alternative: #a9def9ff;
+}
+
+/* RESET */
+body {
+  // background-image: url("https://i.ibb.co/GRtPqn0/mesh.png");
+  // object-fit: contain;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-attachment: fixed;
+  margin: 0;
+}
+
+/* STYLE */
+#root {
+  background: url("https://i.ibb.co/GRtPqn0/mesh.png") no-repeat center / cover;
+  height: 100vh;
+}
+
+/* ======== Bubbles =========== */
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+  overflow-x: hidden;
+  // z-index: -10;
+  // overflow: hidden;
+}
+
+/* ======== GENERAL =========== */
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  h1,
+  p {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+}
+
+/* ======== Home =========== */
+.home {
+  justify-content: space-between;
+
+  .composent-logo-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    img {
+      width: 70%;
+    }
+  }
+
+  .home-button-div {
+    width: 100%;
+    // text-align: center;
+    margin-bottom: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .composent-button-link {
+    width: 8rem;
+    height: 4rem;
+    text-align: center;
+    align-items: flex-end;
+    box-shadow: inset 4px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15%;
+    color: purple;
+    background-color: rgb(168, 50, 189);
+    margin-top: 15%;
+    z-index: 10;
+  }
+
+  a.composent-button-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--main-black-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--title-main-font);
+    color: rgb(255, 184, 52);
+    letter-spacing: 0.05rem;
+    text-shadow: black 1px 1px, black -1px 1px, black -1px -1px, black 1px -1px;
+  }
+}
+
+// .balls-container {
+//   position: relative;
+//   overflow: hidden;
+// }
+
+/* ======== Texte =========== */
+// h1,
+// p {
+//   position: relative;
+//   z-index: 0;
+// }
+
+// /*Le root et le body*/
+
+// /*Le header*/
+// .header {
+//   background-color: var(--main-black-color);
+//   height: 100px;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 0 20px;
+// }
+
+// .header__logo {
+//   font-family: var(--title-main-font);
+//   font-size: 2.5rem;
+//   color: var(--main-white-color);
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   letter-spacing: 0.1rem;
+//   font-weight: bold;
+// }
+
+// .header__logo:hover {
+//   color: var(--main-orange-color);
+// }
+
+// .header__nav {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .header__nav--item {
+//   font-family: var(--text-main-font);
+//   font-size: 1.5rem;
+//   color: var(--main-white-color);
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   letter-spacing: 0.1rem;
+//   font-weight: bold;
+//   margin-left: 2rem;
+//   cursor: pointer;
+// }
+
+// .header__nav--item:hover {
+//   color: var(--main-orange-color);
+// }
+
+// /*Le main*/
+// .main {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   padding: 0 20px;
+// }
+
+// /*Le logo*/
+// .composent-logo {
+//   width: 80%;
+//   height: 80%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin: auto;
+//   margin-bottom: 10%;
+// }
+// /*Le logo*/
+
+// /*Les boutons de la page home*/
+// .home-button-div {
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: flex-end;
+//   margin: 1%;
+// }
+
+// /*Les boutons de la page home*/
+
+// /*L'animation Bubbles*/
+// .ball {
+//   position: absolute;
+//   border-radius: 100%;
+//   opacity: 0.7;
+//   z-index: -1;
+// }
+// /*L'animation Bubbles*/
+
+// /****************** DISHES LIST/ITEM *********************/
+
+// .dishesList-container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: #282c34;
+// }
+
+// .dishItem-container {
+//   display: flex;
+//   justify-content: space-between;
+//   text-align: right;
+//   background-color: cadetblue;
+//   margin: 10px 0;
+//   padding: 20px;
+//   min-width: 30vw;
+// }
+
+// .dishItem-img {
+//   width: 120px;
+//   border-radius: 50%;
+// }
+
+// /*Les titres et textes*/
+
+// .floatting-title {
+//   font-family: var(--title-main-font);
+//   font-size: large;
+//   justify-content: center;
+//   display: flex;
+//   align-items: center;
+//   text-align: center;
+// }
+
+// .floatting-text {
+//   font-family: var(--text-main-font);
+//   font-size: 0.9rem;
+//   justify-content: center;
+//   display: flex;
+//   margin-top: 8%;
+// }
+// .dishesInfos-container {
+//   background-color: brown;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
+// .dishInfo-container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: none;
+// }
+
+// .dishInfoButton {
+//   background-color: grey;
+//   border-radius: 10px;
+//   padding: 0.5rem;
+//   margin-bottom: 1rem;
+// }
+
+// /* ======== Dishes Infos =========== */
+
+// .dishesInfos-container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
+// .dishInfo-container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: none;
+// }
+// /*Les titres et textes*/
+
+// #googleMap {
+//   height: 50%;
+// }
+
+// .input-localisation {
+//   font-family: var(--text-main-font);
+//   font-size: 1rem;
+//   justify-content: center;
+//   display: flex;
+//   flex-direction: column;
+//   width: 90%;
+//   margin-left: 5%;
+// }
+
+// h1 {
+//   font-family: var(--title-main-font);
+//   font-size: 1.5rem;
+//   justify-content: center;
+//   display: flex;
+//   margin-top: 8%;
+// }
+
+// p {
+//   font-family: var(--text-main-font);
+//   font-size: 0.9rem;
+//   justify-content: center;
+//   display: flex;
+//   margin: 3%;
+//   text-align: center;
+// }
+
+// /**************AutoCompletion*****************/
+
+// .suggestion {
+//   background-color: lightgray;
+//   cursor: pointer;
+//   border: 1px solid black;
+//   width: 30rem;
+// }
+
+// .suggestion:hover {
+//   background-color: gray;
+// }
+
+// .inputt {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   width: 30rem;
+// }
+
+// .ingredient-button-div {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   }
+
+//   .ingredient {
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+//     width: auto;
+//     height: auto;
+//   }
+
+//   .dish-match {
+//     box-shadow: inset 4px 8px 8px rgba(0, 0, 0, 0.25);
+//     border-radius: 15%;
+//     border: var(--main-purple-color) solid 1px;
+//     background: var(--main-white-color);
+//     width: 10.5rem;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+//     display: flex;
+//     flex-direction: column;
+//     margin: 0.1rem;
+//     font-family: var(--title-font);
+//     pointer-events: fill;
+//     font-size: medium;
+//   }
+
+//   .dish-match:hover{
+//     background: rgb(168, 50, 189);
+//     cursor: pointer;
+//     color: rgb(255, 184, 52);
+//     font-weight: bold;
+//     font-size: large;
+//   }
+
+//   .container-ingredient {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     width: auto;
+//     height: auto;
+//   }
+
+//   .form-ingredient {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     width: auto;
+//     height: auto;
+//   }
+
+//   .autocomplete-dropdown-container {
+//     width: 21rem;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+//     display: flex;
+//     flex-direction: column;
+//     margin: 0.1rem;
+//     font-family: var(--title-font);
+//     pointer-events: fill;
+//     font-size: medium;
+//     border: none;
+//   }
+
+//   .autocomplete-dropdown-container:hover{
+//     cursor: pointer;
+//   }
+
+//   .suggestion-item--active {
+//     background: var(--main-white-color);
+//     color: rgb(255, 184, 52);
+//     font-weight: bold;
+//     font-size: large;
+//   }
+
+//   .gm-style {
+//   border-radius: 10%;
+//   }
+
+//   .suggestion-item {
+//     font-family: var(--title-main-font);
+//   }
+//   .dish-match-after {
+//     box-shadow: inset 4px 8px 8px rgba(0, 0, 0, 0.25);
+//     border-radius: 15%;
+//     border: var(--main-purple-color) solid 1px;
+//     background: var(--main-white-color);
+//     width: 10.5rem;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+//     display: flex;
+//     flex-direction: column;
+//     margin: 0.1rem;
+//     font-family: var(--title-main-font);
+//     pointer-events: fill;
+//     font-size: medium;
+//   }
+
+//   .dish-match-after:hover {
+//     background: rgb(168, 50, 189);
+//     cursor: pointer;
+//     color: rgb(255, 184, 52);
+//     font-weight: bold;
+//     font-size: large;
+//   }
+
+//   .dish-info-ingredient-title {
+//     font-size: 2rem;
+//     font-weight: bold;
+//     font-family: var(--title-main-font);
+//     margin-bottom: 5%;
+//     text-decoration: underline;
+//   }
+
+//   .dish-info-ingredient-img {
+//     width: 100%;
+//     height: 10%;
+//     object-fit: cover;
+//     border-radius: 5%;
+//     border: solid 1.2px black;
+//   }
+
+//   #defaultNumbers {
+//     display: flex;
+//     align-items: right;
+//     justify-content: right;
+//     flex-direction: row;
+//     width: 10%;
+//     height: 10%;
+//   }
+
+//   .ingredient-input {
+//     font-size: medium;
+//     font-weight: bold;
+//     font-family: var(--title-main-font);
+//     width: 100%;
+//     text-align: center;
+//     border-radius: 5%;
+//     border-color: #000;
+//     height: 80%;
+//     color: #000;
+//   }
+
+//   .div-ingredient-input {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     width: 80%;
+//     height: 80%;
+//   }
+
+//   .comment-ingredient-input {
+//     font-size: medium;
+//     font-weight: bold;
+//     font-family: var(--title-font);
+//     width: 90%;
+//     text-align: center;
+//     border-radius: 5%;
+//     height: 5rem;
+//     margin-bottom: 5%;
+//   }
+
+//   textarea {
+//     border:#000 solid 1px;
+//   }
+
+//   p.title-ingredient-input {
+//     font-size: medium;
+//     font-family: var(--title-main-font);
+//     margin-bottom: 5%;
+//   }
+
+//   .geo-logo {
+//     width: 70%;
+//     align-items: center;
+//     margin: 0%;
+//   }
+
+//   .geo {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   width: auto;
+//   }
+
+//   h1 .geo {
+//     margin: 0%;
+//   }
+
+//   #geo-title {
+//     margin-top: 0%;
+//     margin-bottom: 8%;
+//   }
+
+//   #button-div-map-precedent {
+//     flex-direction: flex-start;
+//     display: flex;
+//     flex-direction: row;
+//     width: 1%;
+//     height: 1%;
+//     font-size: 0.8rem;
+//   }
+
+//   a :first-child {
+//     color: rgb(255, 184, 52);
+//     font-weight: bold;
+//     font-size: 0.8rem;
+//   }
+
+//   #button-div-map {
+//     margin-top: 105%;
+//     justify-content: center;
+//     align-items: center;
+//     margin-left: 30%;
+//   }
+
+//   element.style {
+//     position: absolute;
+//     width: 50%;
+//     height: 50%;
+//   }
+// =======
+// /* *********CHAT*************** */
+// .joinChatContainer {
+//     display: flex;
+//     flex-direction: column;
+//     text-align: center;
+//   }
+
+//   .joinChatContainer h3 {
+//     font-size: 2.5rem;
+//     margin-bottom: 1rem;
+//   }
+//   .joinChatContainer input {
+//     width: 210px;
+//     height: 40px;
+//     margin: 7px;
+//     border: 2px solid #43a047;
+//     border-radius: 5px;
+//     padding: 5px;
+//     font-size: 16px;
+//   }
+
+//   .joinChatContainer button {
+//     width: 225px;
+//     height: 50px;
+//     margin: 7px;
+//     border: none;
+//     border-radius: 5px;
+//     padding: 5px;
+//     font-size: 16px;
+//     background: #43a047;
+//     color: #fff;
+//     cursor: pointer;
+//   }
+//   .joinChatContainer button:hover {
+//     background: #2e7d32;
+//   }
+//   .chat-window {
+//     width: 300px;
+//     height: 420px;
+//   }
+//   .chat-window p {
+//     margin: 0;
+//   }
+//   .chat-window .chat-header {
+//     height: 45px;
+//     -webkit-border-radius: 5px 5px 0px 0px;
+//     border-radius: 5px 5px 0px 0px;
+//     background: #997713;
+//     position: relative;
+//   }
+//   .chat-window .chat-header p {
+//     display: block;
+//     padding: 0 1em 0 2em;
+//     color: #fff;
+//     font-weight: 700;
+//     line-height: 45px;
+//   }
+//   .chat-window .chat-body {
+//     height: calc(450px - (45px + 70px));
+//     border: 1px solid #263238;
+//     background: #fff;
+//     position: relative;
+//   }
+//   .chat-window .chat-body .message-container {
+//     width: 100%;
+//     height: 100%;
+//     overflow-y: scroll;
+//     overflow-x: hidden;
+//   }
+//   .chat-window .chat-body .message-container::-webkit-scrollbar {
+//     display: none;
+//   }
+//   .chat-window .chat-body .message {
+//     height: auto;
+//     padding: 10px;
+//     display: flex;
+//   }
+//   .chat-window .chat-body .message .message-content {
+//     width: auto;
+//     height: auto;
+//     min-height: 40px;
+//     max-width: 120px;
+//     background-color: #43a047;
+//     border-radius: 5px;
+//     color: white;
+//     display: flex;
+//     align-items: center;
+//     margin-right: 5px;
+//     margin-left: 5px;
+//     padding-right: 5px;
+//     padding-left: 5px;
+//     overflow-wrap: break-word;
+//     word-break: break-word;
+//   }
+//   #you {
+//     justify-content: flex-end;
+//   }
+//   #you .message-content {
+//     justify-content: flex-end;
+//   }
+//   #you .message-meta {
+//     justify-content: flex-end;
+//     margin-left: 5px;
+//   }
+//   #other {
+//     justify-content: flex-start;
+//   }
+//   #other .message-content {
+//     justify-content: flex-start;
+//     background-color: cornflowerblue;
+//   }
+//   #other .message-meta {
+//     justify-content: flex-start;
+//     margin-right: 5px;
+//   }
+//   .message-meta #author {
+//     margin-left: 10px;
+//     font-weight: bold;
+//   }
+//   .chat-window .chat-body .message .message-meta {
+//     display: flex;
+//     font-size: 12px;
+//   }
+//   .chat-window .chat-footer {
+//     height: 40px;
+//     border: 1px solid #263238;
+//     -webkit-border-radius: 0px 0px 5px 5px;
+//   border-radius: 0px 0px 5px 5px;
+//     display: flex;
+//   }
+//   .chat-window .chat-footer input {
+//     height: 95%;
+//     flex: 85%;
+//     border: 0;
+//     padding: 0 0.7em;
+//     font-size: 1em;
+//     border-right: 1px dotted #607d8b;
+//     outline: none;
+//     font-family: "Open Sans", sans-serif;
+//   }
+//   .chat-window .chat-footer button {
+//     border: 0;
+//     display: grid;
+//     place-items: center;
+//     cursor: pointer;
+//     flex: 15%;
+//     height: 100%;
+//     background: transparent;
+//     outline: none;
+//     font-size: 1rem;
+//     color: lightgray;
+//   }
+//   .chat-window .chat-footer button:hover {
+//     color: #43a047;
+//   }
+//   .hide {
+//     opacity: 0 !important;
+//   }
