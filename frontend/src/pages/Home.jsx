@@ -1,5 +1,4 @@
 import React from "react";
-import LittleBubbles from "../components/LittleBubbles";
 import Logos from "../components/Logos";
 import Button from "../components/Button";
 import FloattingText from "../components/FloattingText";
@@ -7,10 +6,9 @@ import FloattingTitle from "../components/FloattingTitle";
 
 function Home() {
   return (
-    <div className="home">
+    <section className="home">
       <Button link="/about" text="À Propos" />
-      <Logos />
-      <LittleBubbles />
+      <Logos isFoodAdopted={false} />
       <FloattingTitle title="Adopte un reste, c'est quoi ?" />
       <FloattingText
         text={`Cette année plus que jamais, la générosité et la solidarité sont de mise, alors à l'action !
@@ -22,7 +20,7 @@ function Home() {
         <Button link="/geo/take" text="Je prends" />
         <Button link="/geo/give" text="Je donne" />
       </div>
-    </div>
+    </section>
   );
 }
 

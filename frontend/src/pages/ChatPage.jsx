@@ -1,4 +1,3 @@
-import "../App.scss";
 import io from "socket.io-client";
 import { useState } from "react";
 import Chat from "../components/Chat";
@@ -7,8 +6,7 @@ import Button from "../components/Button";
 const socket = io.connect("http://localhost:3001");
 
 function Chatpage() {
-  // eslint-disable-next-line no-unused-vars
-  const [room, setRoom] = useState("");
+  const [room] = useState("");
   const [userName, setUserName] = useState("");
   const [showChat, setShowChat] = useState(false);
 
@@ -20,7 +18,7 @@ function Chatpage() {
   };
 
   return (
-    <div className="ChatPage">
+    <section className="ChatPage">
       {!showChat ? ( // cacher le chat avant login
         <div className="joinChatContainer">
           <h3>Rejoindre</h3>
@@ -42,8 +40,7 @@ function Chatpage() {
           <Button link="/validation" text="C'est bon" />
         </>
       )}
-    </div>
+    </section>
   );
 }
-
 export default Chatpage;
