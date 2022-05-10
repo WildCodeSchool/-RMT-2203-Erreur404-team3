@@ -106,12 +106,12 @@ section {
   }
 
   .geo-map {
-    height: 74vh;
+    // height: 74vh;
     top: 0;
     z-index: 10;
     // background-color: red;
     text-align: center;
-    width: 100%;
+    // width: 100%;
 
     .pac-container {
       display: flex;
@@ -130,7 +130,7 @@ section {
 
       #googleMap {
         height: 74vh;
-        width: 22vh;
+        width: 100%;
 
         .input-localisation {
           position: relative;
