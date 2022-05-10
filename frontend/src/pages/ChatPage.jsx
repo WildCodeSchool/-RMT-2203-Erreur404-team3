@@ -1,4 +1,4 @@
-import "../App.css";
+import "../App.scss";
 import io from "socket.io-client";
 import { useState } from "react";
 import Chat from "../components/Chat";
