@@ -13,8 +13,7 @@ export default function ValidationPage() {
       <LittleBubbles />
       <FloattingText text="Penses à bien valider lorsque tu as récupéré ton plat !" />
       <div className="Validationpage-button-div">
-        <Button link="/" text="J'ai récupéré mon reste !" />
-        <Button link="/" text="J'ai donné mon reste !" />
+        <Button link="/" text="Merci de votre geste !" />
       </div>
     </div>
   );

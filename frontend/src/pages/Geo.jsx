@@ -16,7 +16,7 @@ function Geo() {
         <GoogleMap />
       </div>
       <div id="button-div-map">
-        <Button link="/ingredient" text="Je propose mon reste" />
+        <Button link="/disheslist" text="Je propose mon reste" />
         <Button link="/ingredient" text="Je prends mon reste" />
       </div>
     </>

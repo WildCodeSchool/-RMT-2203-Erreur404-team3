@@ -15,21 +15,21 @@ import "./App.css";
 function App() {
   return (
     <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/disheslist" element={<DishesList />} />
-          <Route path="/dishesinfos" element={<DishesInfos />} />
-          <Route path="/geo" element={<Geo />} />
-          <Route path="/geo/:action" element={<GeoAction />} />
-          <Route path="/chat" element={<Chatpage />} />
-          <Route
-            path="/displayingredient/:recipe"
-            element={<DisplayIngredient />}
-          />
-          <Route path="/ingredient" element={<Ingredient />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/validation" element={<ValidationPage />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/disheslist" element={<DishesList />} />
+        <Route path="/dishesinfos" element={<DishesInfos />} />
+        <Route path="/geo" element={<Geo />} />
+        <Route path="/geo/:action" element={<GeoAction />} />
+        <Route path="/chat" element={<Chatpage />} />
+        <Route
+          path="/displayingredient/:recipe"
+          element={<DisplayIngredient />}
+        />
+        <Route path="/ingredient" element={<Ingredient />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/validation" element={<ValidationPage />} />
+      </Routes>
     </Router>
   );
 }
