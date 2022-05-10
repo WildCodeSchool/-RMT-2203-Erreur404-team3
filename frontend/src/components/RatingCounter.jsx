@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 
-export default function Stars() {
+export default function RatingCounter() {
   const [rating, setRating] = useState(100); /* valeur initiale */
 
   /* recuperation de la valeur */
@@ -13,7 +13,7 @@ export default function Stars() {
   return (
     <Rating
       fillColor="#F72585"
-      tooltipArray={["dégueu", "mouais", "ça passe", "j'adore", "orgasmique"]}
+      tooltipArray={["No Comment", "Bof", "Pas Mal", "Cool", "J'adore"]}
       transition
       showTooltip
       onClick={handleRating}
