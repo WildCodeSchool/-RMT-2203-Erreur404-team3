@@ -8,6 +8,7 @@ import FloattingTitle from "../components/FloattingTitle";
 function Home() {
   return (
     <div className="home">
+      <Button link="/about" text="À Propos" />
       <Logos />
       <LittleBubbles />
       <FloattingTitle title="Adopte un reste, c'est quoi ?" />

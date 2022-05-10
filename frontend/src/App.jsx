@@ -1,6 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// eslint-disable-next-line import/no-unresolved
 import Home from "./pages/Home";
 import Geo from "./pages/Geo";
 import GeoAction from "./pages/GeoAction";
@@ -16,14 +15,6 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/about">A Propos</Link>
-            </li>
-          </ul>
-        </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/disheslist" element={<DishesList />} />
@@ -39,7 +30,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/validation" element={<ValidationPage />} />
         </Routes>
-      </div>
     </Router>
   );
 }
