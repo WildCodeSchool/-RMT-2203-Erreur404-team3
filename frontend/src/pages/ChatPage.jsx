@@ -7,12 +7,13 @@ import Button from "../components/Button";
 const socket = io.connect("http://localhost:3001");
 
 function Chatpage() {
+  // eslint-disable-next-line no-unused-vars
   const [room, setRoom] = useState("");
   const [userName, setUserName] = useState("");
   const [showChat, setShowChat] = useState(false);
 
   const joinRoom = () => {
-    if (userName !== "" && room !== "") {
+    if (userName !== "") {
       socket.emit("join_room", room);
       setShowChat(true);
     }
@@ -28,14 +29,6 @@ function Chatpage() {
             placeholder="Votre nom"
             onChange={(event) => {
               setUserName(event.target.value);
-            }}
-          />
-
-          <input
-            type="text"
-            placeholder="Room number"
-            onChange={(event) => {
-              setRoom(event.target.value);
             }}
           />
           <button type="button" onClick={joinRoom}>
