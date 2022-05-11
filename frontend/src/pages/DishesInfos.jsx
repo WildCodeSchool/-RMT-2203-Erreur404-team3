@@ -17,11 +17,9 @@ function DishesInfos() {
   }, []);
 
   return (
-    <div className="dishesInfos-container">
-      <div>
-        <DishInfo dish={mealData} />
-      </div>
-    </div>
+    <section className="dishesInfos-container">
+      <DishInfo dish={mealData} />
+    </section>
   );
 }
 

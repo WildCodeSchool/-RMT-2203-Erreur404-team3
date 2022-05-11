@@ -19,7 +19,7 @@ function Chatpage() {
 
   return (
     <section className="ChatPage">
-      {!showChat ? ( // cacher le chat avant login
+      {!showChat ? (
         <div className="joinChatContainer">
           <h3>Rejoindre</h3>
           <input
