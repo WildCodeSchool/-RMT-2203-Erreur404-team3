@@ -1,9 +1,20 @@
 /* eslint-disable no-unused-vars */
+import { useParams } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
-import Map from "./Map";
+import Button from "./Button";
 
 function SaveUsers() {
+  const { action } = useParams();
+  const url = {
+    take: "/disheslist",
+    give: "/ingredient",
+  };
+  const text = {
+    take: "Je prends mon reste",
+    give: "Je donne mon reste",
+  };
+
   const [userFirstName, setUserFirstname] = useState("");
   const [userLastName, setUserLastName] = useState("");
   const [userLocation, setUserLocation] = useState("");
@@ -40,40 +51,34 @@ function SaveUsers() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="geo-input-form">
-        <h2>
-          Entrez votre nom, prenoms ainsi que votre image de profil si vous le
-          souhaitez
-        </h2>
-        <input
-          value={userFirstName}
-          type="text"
-          name="firstName"
-          placeholder="First Name"
-          onChange={(e) => setUserFirstname(e.target.value)}
-          required
-        />
-        <input
-          value={userLastName}
-          type="text"
-          name="lastName"
-          placeholder="Last Name"
-          onChange={(e) => setUserLastName(e.target.value)}
-          required
-        />
-        <Map userLocation={userLocation} setUserLocation={setUserLocation} />
-        <div className="save-users-button-div">
-          <button
-            className="save-users-button"
-            type="submit"
-            onClick={handleSubmit}
-          >
-            Confirmer
-          </button>
-        </div>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit} className="geo-input-form">
+      <input
+        value={userFirstName}
+        type="text"
+        name="firstName"
+        placeholder="First Name"
+        onChange={(e) => setUserFirstname(e.target.value)}
+        required
+      />
+      <input
+        value={userLastName}
+        type="text"
+        name="lastName"
+        placeholder="Last Name"
+        onChange={(e) => setUserLastName(e.target.value)}
+        required
+      />
+
+      <button
+        className="save-users-button"
+        type="submit"
+        onClick={handleSubmit}
+      >
+        Confirmer
+      </button>
+
+      <Button link={url[action]} text={text[action]} />
+    </form>
   );
 }
 

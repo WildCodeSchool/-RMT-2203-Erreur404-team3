@@ -14,7 +14,7 @@ function DishItem({ dish }) {
       <div>
         <p>{dish.dishname}</p>
         <p>
-          à {dish.userschatid} mètres de moi par {dish.userfirstname}{" "}
+          à {dish.userschatid} mètres de moi par {dish.userfirstname}
           {dish.userlastname}
         </p>
       </div>
