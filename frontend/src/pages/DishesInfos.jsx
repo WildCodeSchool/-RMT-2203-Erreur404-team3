@@ -4,11 +4,9 @@ import dishes from "../datas/Dishes";
 
 function DishesInfos() {
   return (
-    <div className="dishesInfos-container">
-      <div>
-        <DishInfo dish={dishes[0]} />
-      </div>
-    </div>
+    <section className="dishesInfos-container">
+      <DishInfo dish={dishes[0]} />
+    </section>
   );
 }
 

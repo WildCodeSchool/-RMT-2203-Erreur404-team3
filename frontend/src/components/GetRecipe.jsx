@@ -30,7 +30,7 @@ function GetRecipes() {
   }, [search]);
 
   return (
-    <div>
+    <>
       <div className="logo-get-recipte">
         <Logos />
       </div>
@@ -59,7 +59,7 @@ function GetRecipes() {
           </label>
         </form>
       </div>
-    </div>
+    </>
   );
 }
 

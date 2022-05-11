@@ -1,15 +1,11 @@
 import React from "react";
 import GetRecipes from "../components/GetRecipe";
-import Button from "../components/Button";
 
 function Ingredient() {
   return (
-    <div className="ingredient">
+    <section className="ingredient">
       <GetRecipes />
-      <div className="ingredient-button-div">
-        <Button link="/" text="J'offre !" />
-      </div>
-    </div>
+    </section>
   );
 }
 

@@ -4,12 +4,12 @@ import Button from "../components/Button";
 
 function DisplayIngredient() {
   return (
-    <div className="ingredient">
+    <section className="displayIngredient">
       <DisplayRecipe />
       <div className="ingredient-button-div">
         <Button link="/Chat" text="J'offre !" />
       </div>
-    </div>
+    </section>
   );
 }
 
