@@ -14,6 +14,10 @@ class MapContainer extends Component {
     super(props);
     this.state = {
       address: "",
+      userLocation: {
+        lat: 0,
+        lng: 0,
+      },
 
       showingInfoWindow: false,
       activeMarker: {},
@@ -36,8 +40,9 @@ class MapContainer extends Component {
       .then((latLng) => {
         this.setState({ address });
         this.setState({ mapCenter: latLng });
-        const userLocation = `${address} Lat : ${latLng.lat} Long : ${latLng.lng}`;
-        console.warn("The user location is : ", userLocation);
+        this.setState({ userLocation: latLng });
+        const userLocation = latLng;
+        this.props.setUserLocation(userLocation);
       })
       .catch((error) => console.error("Error", error));
   };
