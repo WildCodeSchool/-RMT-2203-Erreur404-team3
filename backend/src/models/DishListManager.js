@@ -29,14 +29,16 @@ class DishListManager extends AbstractManager {
 
   update(dishlist) {
     return this.connection.query(
-      `update ${DishListManager.table} set dishimage = ?, dishnumber = ?, dishcomment= ?, dishingredient1= ?, dishingredient2= ?, dishingredient3= ? where id = ?`,
+      `update ${DishListManager.table} set dishname = ?, dishimage = ?, dishnumber = ?, dishcomment= ?, dishingredient1= ?, dishingredient2= ?, dishingredient3= ?, userschatid= ? where id = ?`,
       [
+        dishlist.dishname,
         dishlist.dishimage,
         dishlist.dishnumber,
         dishlist.dishcomment,
         dishlist.dishingredient1,
         dishlist.dishingredient2,
         dishlist.dishingredient3,
+        dishlist.userschatid,
         dishlist.id,
       ]
     );
