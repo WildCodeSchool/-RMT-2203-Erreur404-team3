@@ -52,15 +52,13 @@ class MapContainer extends Component {
           }}
           defaultOptions={{
             disableDefaultStyles: true,
-            disableDefaultUI: true, // disable default map UI
-            draggable: true, // make map draggable
-            keyboardShortcuts: false, // disable keyboard shortcuts
-            scaleControl: true, // allow scale controle
-            scrollwheel: true, // allow scroll wheel
+            disableDefaultUI: true,
+            draggable: true,
+            keyboardShortcuts: false,
+            scaleControl: true,
+            scrollwheel: true,
             styles: {
               color: "#000",
-              // width: "80%",
-              // height: "80%",
             },
           }}
           value={this.state.address}
@@ -78,7 +76,6 @@ class MapContainer extends Component {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                // justifyContent: "center",
                 position: "relative",
               }}
             >
@@ -102,7 +99,6 @@ class MapContainer extends Component {
                   const className = suggestion.active
                     ? "suggestion-item--active"
                     : "suggestion-item";
-                  // inline style for demonstration purpose
                   const style = suggestion.active
                     ? {
                         backgroundColor: "none",
@@ -141,7 +137,6 @@ class MapContainer extends Component {
           className="googleMapContainer"
           style={{
             margin: "-30% 12%",
-            // width: "100%",
           }}
         >
           <Map
@@ -155,15 +150,13 @@ class MapContainer extends Component {
             }}
             defaultOptions={{
               disableDefaultStyles: true,
-              disableDefaultUI: true, // disable default map UI
-              draggable: true, // make map draggable
-              keyboardShortcuts: false, // disable keyboard shortcuts
-              scaleControl: true, // allow scale controle
-              scrollwheel: true, // allow scroll wheel
+              disableDefaultUI: true,
+              draggable: true,
+              keyboardShortcuts: false,
+              scaleControl: true,
+              scrollwheel: true,
               styles: {
                 color: "#000",
-                // width: "80%",
-                // height: "80%",
               },
             }}
             google={this.props.google}
@@ -179,15 +172,13 @@ class MapContainer extends Component {
             <Marker
               defaultOptions={{
                 disableDefaultStyles: true,
-                disableDefaultUI: true, // disable default map UI
-                draggable: true, // make map draggable
-                keyboardShortcuts: false, // disable keyboard shortcuts
-                scaleControl: true, // allow scale controle
-                scrollwheel: true, // allow scroll wheel
+                disableDefaultUI: true,
+                draggable: true,
+                keyboardShortcuts: false,
+                scaleControl: true,
+                scrollwheel: true,
                 styles: {
                   color: "#000",
-                  // width: "80%",
-                  // height: "80%",
                 },
               }}
               position={{
