@@ -7,7 +7,7 @@ function DisplayRecipe() {
   const [mealData, setMealData] = React.useState([]);
   const [userId, setUserId] = React.useState("");
   const [dishNumber, setDishNumber] = React.useState("");
-  const [dishComment, setDishComment] = React.useState("");
+  const [dishComment] = React.useState("");
   const [usersChatId, setUsersChatId] = React.useState("");
 
   const { recipe } = useParams();
@@ -81,9 +81,9 @@ function DisplayRecipe() {
           <div className="div-ingredient-input">
             <input
               className="ingredient-input"
-                list="defaultNumbers"
-                placeholder="Portions (env. 250g)"
-                onChange={(e) => setDishNumber(e.target.value)}
+              list="defaultNumbers"
+              placeholder="Portions (env. 250g)"
+              onChange={(e) => setDishNumber(e.target.value)}
             />
             <datalist id="defaultNumbers">
               <option value="1 portion" aria-label="1 portion" />
@@ -110,17 +110,16 @@ function DisplayRecipe() {
         </>
       ))}
       <button
-          className="dish-match-after"
-          type="submit"
-          onClick={handleSubmit}
-          onSubmit={handleSubmit}
-        >
-          Confirmer
-        </button>
-        <button type="input" className="dish-match-after">
-          <Link to="/ingredient">Revenir au choix du plat</Link>
-        </button>
-
+        className="dish-match-after"
+        type="submit"
+        onClick={handleSubmit}
+        onSubmit={handleSubmit}
+      >
+        Confirmer
+      </button>
+      <button type="submit" className="dish-match-after">
+        <Link to="/ingredient">Revenir au choix du plat</Link>
+      </button>
     </div>
   );
 }

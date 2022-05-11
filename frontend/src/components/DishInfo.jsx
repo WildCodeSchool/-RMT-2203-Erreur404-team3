@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/DishInfo.css";
+import Button from "./Button";
 
 function DishInfo({ dish }) {
   return (
@@ -33,4 +34,3 @@ function DishInfo({ dish }) {
 }
 
 export default DishInfo;
-
