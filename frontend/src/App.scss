@@ -71,7 +71,6 @@ section {
     color: purple;
     background-color: rgb(168, 50, 189);
     z-index: 10;
-    text-align: center;
   }
 
   a.composent-button-link {
@@ -282,13 +281,17 @@ section {
 
 /* ======== Validation =========== */
 
-.validation {
-  p {
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 10% 0;
-  }
-}
+// .balls-container {
+//   position: relative;
+//   overflow: hidden;
+// }
+
+/* ======== Texte =========== */
+// h1,
+// p {
+//   position: relative;
+//   z-index: 0;
+// }
 
 // /*Le root et le body*/
 
@@ -959,6 +962,7 @@ a {
 .mediabutton:nth-child(4):hover .icon {
   background:#fcf680;
 }
+
 .mediabutton:nth-child(1) span {
   color: #4267b2;
 }
@@ -992,3 +996,4 @@ a {
 .mediabutton:hover i {
 	color: #fff;
 }
+
