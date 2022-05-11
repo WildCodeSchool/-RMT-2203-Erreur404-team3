@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Media() {
   return (
-    <div>
+    <article>
       <div className="mediabutton">
         <div className="icon">
           <img src="src/assets/facebook-brands.svg" alt="social media" />
@@ -23,6 +23,6 @@ export default function Media() {
         </div>
         <span>Github</span>
       </div>
-    </div>
+    </article>
   );
 }
