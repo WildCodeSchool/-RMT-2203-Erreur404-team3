@@ -5,6 +5,11 @@ import FloattingTitle from "./FloattingTitle";
 
 function DisplayRecipe() {
   const [mealData, setMealData] = React.useState([]);
+  const [userId, setUserId] = React.useState("");
+  const [dishNumber, setDishNumber] = React.useState("");
+  const [dishComment, setDishComment] = React.useState("");
+  const [usersChatId, setUsersChatId] = React.useState("");
+
   const { recipe } = useParams();
   useEffect(() => {
     const getMealData = async () => {
@@ -12,10 +17,50 @@ function DisplayRecipe() {
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${recipe}`
       );
       setMealData(getMealResult.data.meals);
-      console.warn("Le plat :", mealData);
     };
     getMealData();
   }, []);
+
+  axios
+    .get(`http://localhost:5000/dishlistf`)
+    .then((res) => {
+      const getId = res.data.id;
+      setUserId(getId);
+    })
+    .then(() => {
+      console.warn("Yes yes !");
+    })
+    .catch(() => {
+      console.warn("No no!");
+    });
+
+  useEffect(() => {
+    const randomNumber = Math.floor(Math.random() * 100);
+    setUsersChatId(randomNumber);
+    console.warn("d", usersChatId);
+  }, []);
+
+  const handleSubmit = () => {
+    axios
+      .put(`http://localhost:5000/dishlist/${userId}`, {
+        dishname: mealData[0].strMeal,
+        dishimage: mealData[0].strMealThumb,
+        dishnumber: dishNumber,
+        dishcomment: dishComment,
+        dishingredient1: mealData[0].strIngredient1,
+        dishingredient2: mealData[0].strIngredient2,
+        dishingredient3: mealData[0].strIngredient3,
+        userschatid: usersChatId,
+        id: userId,
+      })
+      .then(() => {
+        console.warn("OK!");
+        console.warn(dishNumber);
+      })
+      .catch(() => {
+        console.warn("PAS OK!");
+      });
+  };
 
   return (
     <div className="container-ingredient">
@@ -36,8 +81,9 @@ function DisplayRecipe() {
           <div className="div-ingredient-input">
             <input
               className="ingredient-input"
-              list="defaultNumbers"
-              placeholder="portions (env.250g)"
+                list="defaultNumbers"
+                placeholder="Portions (env. 250g)"
+                onChange={(e) => setDishNumber(e.target.value)}
             />
             <datalist id="defaultNumbers">
               <option value="1 portion" aria-label="1 portion" />
@@ -63,9 +109,18 @@ function DisplayRecipe() {
           </div>
         </>
       ))}
-      <button type="submit" className="dish-match-after">
-        <Link to="/ingredient">Revenir au choix du plat</Link>
-      </button>
+      <button
+          className="dish-match-after"
+          type="submit"
+          onClick={handleSubmit}
+          onSubmit={handleSubmit}
+        >
+          Confirmer
+        </button>
+        <button type="input" className="dish-match-after">
+          <Link to="/ingredient">Revenir au choix du plat</Link>
+        </button>
+
     </div>
   );
 }

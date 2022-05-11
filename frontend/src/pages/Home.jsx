@@ -11,7 +11,10 @@ function Home() {
       <span className="aboutbutton">
         <Button link="/about" text="À Propos" />
       </span>
-      <Logos isFoodAdopted={false} />
+      <Logos
+        img="https://i.ibb.co/mG1mFSd/Adopte-un-reste.png"
+        alt="Adopte-un-reste"
+      />
       <FloattingTitle title="Adopte un reste, c'est quoi ?" />
       <FloattingText
         text={`Cette année plus que jamais, la générosité et la solidarité sont de mise, alors à l'action !

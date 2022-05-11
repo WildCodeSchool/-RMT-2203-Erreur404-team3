@@ -8,7 +8,10 @@ function Geo() {
     <>
       <div className="geo">
         <div className="geo-logo">
-          <Logos />
+          <Logos
+            img="https://i.ibb.co/mG1mFSd/Adopte-un-reste.png"
+            alt="Adopte-un-reste"
+          />
         </div>
         <div className="geo-title">
           <h1 id="geo-title">Entrer votre position :</h1>
