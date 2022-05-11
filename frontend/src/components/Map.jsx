@@ -87,6 +87,7 @@ class MapContainer extends Component {
                   width: "100%",
                   textAlign: "center",
                   margin: "0",
+                  height: "5vh",
                 }}
                 {...getInputProps({
                   placeholder: "Taper votre texte ici...",
@@ -139,14 +140,14 @@ class MapContainer extends Component {
         <div
           className="googleMapContainer"
           style={{
-            margin: "-15% 10%",
+            margin: "-30% 10%",
             // width: "100%",
           }}
         >
           <Map
             className="googleMap"
             style={{
-              position: "fixed",
+              position: "relative",
               width: "100%",
               height: "100%",
               top: "0%",

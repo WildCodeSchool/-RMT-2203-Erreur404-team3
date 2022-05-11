@@ -129,13 +129,13 @@ section {
       // width: 100%;
 
       #googleMap {
-        height: 74vh;
+        height: 79vh;
         width: 100%;
 
         .input-localisation {
           position: relative;
           z-index: 20;
-          bottom: -10vh;
+          bottom: -20vh;
           // display: flex;
           // flex-direction: column-reverse;
 
@@ -167,7 +167,7 @@ section {
   }
 
   .geo-bot {
-    height: 30vh;
+    height: 26vh;
     bottom: 0;
     z-index: 10;
     border-radius: 32px 32px 0 0;
