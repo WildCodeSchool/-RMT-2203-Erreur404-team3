@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import GoogleMap from "../components/Map";
 import Button from "../components/Button";
+import SaveUsers from "../components/SaveUsers";
 
 function GeoAction() {
   const { action } = useParams();
@@ -16,7 +16,7 @@ function GeoAction() {
   return (
     <section className="geo">
       <div className="container geo-map">
-        <GoogleMap />
+        <SaveUsers />
       </div>
 
       <div className="container geo-bot">
