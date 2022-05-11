@@ -6,7 +6,6 @@ import Map from "./Map";
 function SaveUsers() {
   const [userFirstName, setUserFirstname] = useState("");
   const [userLastName, setUserLastName] = useState("");
-  const [userImage, setUserImage] = useState("");
   const [userLocation, setUserLocation] = useState("");
   const [userLat, setUserLat] = useState("");
   const [userLng, setUserLng] = useState("");
@@ -18,7 +17,6 @@ function SaveUsers() {
     const submit = {
       userFirstName,
       userLastName,
-      userImage,
       date,
       userLat,
       userLng,
@@ -29,7 +27,6 @@ function SaveUsers() {
       .post("http://localhost:5000/dishlist", {
         userfirstname: userFirstName,
         userlastname: userLastName,
-        userimage: userImage,
         dishdate: date,
         userlat: userLat,
         userlng: userLng,
@@ -63,14 +60,6 @@ function SaveUsers() {
           name="lastName"
           placeholder="Last Name"
           onChange={(e) => setUserLastName(e.target.value)}
-          required
-        />
-        <input
-          value={userImage}
-          type="text"
-          name="userImage"
-          placeholder="Image"
-          onChange={(e) => setUserImage(e.target.value)}
           required
         />
         <Map userLocation={userLocation} setUserLocation={setUserLocation} />
