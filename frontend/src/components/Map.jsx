@@ -46,23 +46,19 @@ class MapContainer extends Component {
     return (
       <div id="googleMap">
         <PlacesAutocomplete
+          className="googlePlaces"
           style={{
-            width: "97%",
-            height: "80%",
-            margin: "1%",
-            position: "absolute",
+            width: "100%",
           }}
           defaultOptions={{
             disableDefaultStyles: true,
-            disableDefaultUI: true, // disable default map UI
-            draggable: true, // make map draggable
-            keyboardShortcuts: false, // disable keyboard shortcuts
-            scaleControl: true, // allow scale controle
-            scrollwheel: true, // allow scroll wheel
+            disableDefaultUI: true,
+            draggable: true,
+            keyboardShortcuts: false,
+            scaleControl: true,
+            scrollwheel: true,
             styles: {
               color: "#000",
-              width: "80%",
-              height: "80%",
             },
           }}
           value={this.state.address}
@@ -75,8 +71,21 @@ class MapContainer extends Component {
             getSuggestionItemProps,
             loading,
           }) => (
-            <div className="input-localisation">
+            <div
+              className="input-localisation"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                position: "relative",
+              }}
+            >
               <input
+                style={{
+                  width: "100%",
+                  textAlign: "center",
+                  margin: "0",
+                  height: "5vh",
+                }}
                 {...getInputProps({
                   placeholder: "Taper votre texte ici...",
                   className: "location-search-input",
@@ -90,30 +99,24 @@ class MapContainer extends Component {
                   const className = suggestion.active
                     ? "suggestion-item--active"
                     : "suggestion-item";
-                  // inline style for demonstration purpose
                   const style = suggestion.active
                     ? {
                         backgroundColor: "none",
                         cursor: "grab",
                         color: "#000",
-                        width: "80%",
-                        height: "80%",
                       }
                     : {
                         backgroundColor: "none",
                         cursor: "grab",
                         color: "#000",
-                        width: "80%",
-                        height: "80%",
                       };
                   return (
                     <div
+                      className="googleSuggest"
                       style={{
-                        width: "94%",
-                        height: "50%",
-                        margin: "1%",
-                        position: "absolute",
-                        display: "flex",
+                        margin: "0",
+                        position: "relative",
+                        display: "inline",
                         fontFamily: "Petemoss",
                         fontSize: "1.5rem",
                       }}
@@ -131,34 +134,29 @@ class MapContainer extends Component {
           )}
         </PlacesAutocomplete>
         <div
+          className="googleMapContainer"
           style={{
-            width: "94%",
-            height: "60%",
-            margin: "1%",
-            position: "absolute",
-            display: "flex",
+            margin: "-30% 12%",
           }}
         >
           <Map
+            className="googleMap"
             style={{
-              width: "99%",
-              height: "80%",
-              margin: "5%",
-              position: "absolute",
-              display: "flex",
-              border: "1px solid black",
+              position: "relative",
+              width: "100%",
+              height: "100%",
+              top: "0%",
+              left: "-33%",
             }}
             defaultOptions={{
               disableDefaultStyles: true,
-              disableDefaultUI: true, // disable default map UI
-              draggable: true, // make map draggable
-              keyboardShortcuts: false, // disable keyboard shortcuts
-              scaleControl: true, // allow scale controle
-              scrollwheel: true, // allow scroll wheel
+              disableDefaultUI: true,
+              draggable: true,
+              keyboardShortcuts: false,
+              scaleControl: true,
+              scrollwheel: true,
               styles: {
                 color: "#000",
-                width: "80%",
-                height: "80%",
               },
             }}
             google={this.props.google}
@@ -174,15 +172,13 @@ class MapContainer extends Component {
             <Marker
               defaultOptions={{
                 disableDefaultStyles: true,
-                disableDefaultUI: true, // disable default map UI
-                draggable: true, // make map draggable
-                keyboardShortcuts: false, // disable keyboard shortcuts
-                scaleControl: true, // allow scale controle
-                scrollwheel: true, // allow scroll wheel
+                disableDefaultUI: true,
+                draggable: true,
+                keyboardShortcuts: false,
+                scaleControl: true,
+                scrollwheel: true,
                 styles: {
                   color: "#000",
-                  width: "80%",
-                  height: "80%",
                 },
               }}
               position={{

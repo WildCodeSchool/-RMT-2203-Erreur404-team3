@@ -2,7 +2,6 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import GoogleMap from "../components/Map";
 import Button from "../components/Button";
-import Logos from "../components/Logos";
 
 function GeoAction() {
   const { action } = useParams();
@@ -15,20 +14,15 @@ function GeoAction() {
     give: "Je donne mon reste",
   };
   return (
-    <>
-      <div className="geo">
-        <div className="geo-logo">
-          <Logos />
-        </div>
-        <div className="geo-title">
-          <h1 id="geo-title">Entrer votre position :</h1>
-        </div>
+    <section className="geo">
+      <div className="container geo-map">
         <GoogleMap />
       </div>
-      <div id="button-div-map">
+
+      <div className="container geo-bot">
         <Button link={url[action]} text={text[action]} />
       </div>
-    </>
+    </section>
   );
 }
 

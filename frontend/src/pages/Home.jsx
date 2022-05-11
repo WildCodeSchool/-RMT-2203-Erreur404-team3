@@ -1,3 +1,4 @@
+/* eslint-disable no-return-assign */
 import React from "react";
 import Logos from "../components/Logos";
 import Button from "../components/Button";
@@ -7,7 +8,9 @@ import FloattingTitle from "../components/FloattingTitle";
 function Home() {
   return (
     <section className="home">
-      <Button link="/about" text="À Propos" />
+      <span className="aboutbutton">
+        <Button link="/about" text="À Propos" />
+      </span>
       <Logos isFoodAdopted={false} />
       <FloattingTitle title="Adopte un reste, c'est quoi ?" />
       <FloattingText
