@@ -906,6 +906,23 @@ section {
 //     opacity: 0 !important;
 //   }
 
+/********DonatingButton*************/
+a {
+  display: inline-block;
+  margin: 20px;
+  text-decoration: none;
+}
+
+.donate {
+  font-family: "Gagalin", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  background: rgb(168, 50, 189);
+  border-radius: 7px;
+  color: #fcf680;
+  padding: 15px 65px 15px 15px;
+}
+
 /**********Media**************/
 
 .mediabutton {
@@ -940,11 +957,10 @@ section {
 }
 
 .mediabutton:nth-child(3):hover .icon {
-  background: #ff0000;
+  background: #0a66c2;
 }
-
 .mediabutton:nth-child(4):hover .icon {
-  background: #333;
+  background:#fcf680;
 }
 
 .mediabutton:nth-child(1) span {
@@ -956,29 +972,28 @@ section {
 }
 
 .mediabutton:nth-child(3) span {
-  color: #ff0000;
+  color: #0a66c2;
 }
 
 .mediabutton:nth-child(4) span {
-  color: #333;
+  color: black;
 }
-
 .mediabutton .icon {
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  border-radius: 50px;
-  display: inline-block;
-  transition: all 0.3s ease-in-out;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	border-radius: 50px;
+	display: inline-block;
+	transition: all 0.3s ease-in-out;
 }
 
 .mediabutton .icon i {
-  font-size: 25px;
-  line-height: 60px;
-  transition: all 0.3s ease-in-out;
+	font-size: 25px;
+	line-height: 60px;
+	transition: all 0.3s ease-in-out;
 }
 
 .mediabutton:hover i {
-  color: #fff;
+	color: #fff;
 }
 
