@@ -4,16 +4,19 @@ import { Link } from "react-router-dom";
 function DishItem({ dish }) {
   return (
     <div className="dishItem-container">
-      <Link to="/dishesinfos">
+      <Link to={`/dishesinfos/${dish.id}`}>
         <img
-          src={dish.image.src}
-          alt={dish.image.alt}
+          src={dish.dishimage}
+          alt={dish.dishname}
           className="dishItem-img"
         />
       </Link>
       <div>
-        <p>{dish.itemName}</p>
-        <p>à {dish.distance} mètres de moi</p>
+        <p>{dish.dishname}</p>
+        <p>
+          à {dish.userschatid} mètres de moi par {dish.userfirstname}{" "}
+          {dish.userlastname}
+        </p>
       </div>
     </div>
   );
