@@ -5,28 +5,28 @@ export default function Media() {
     <div>
       <div className="mediabutton">
         <div className="icon">
-          <i className="fab fa-facebook-f" />
+          <img src="assets/facebook-brands.svg" alt="social media " />
         </div>
         <span>Facebook</span>
       </div>
 
       <div className="mediabutton">
         <div className="icon">
-          <i className="fab fa-twitter" />
+          <img src="assets/twitter-brands.svg" alt="social media " />
         </div>
         <span>Twitter</span>
       </div>
 
       <div className="mediabutton">
         <div className="icon">
-          <i className="fab fa-linkedin" />
+          <img src="assets/linkedin-brands.svg" alt="social media " />
         </div>
         <span>LinkedIn</span>
       </div>
 
       <div className="mediabutton">
         <div className="icon">
-          <i className="fab fa-github" />
+          <img src="assets/github-brands.svg" alt="social media " />
         </div>
         <span>Github</span>
       </div>
