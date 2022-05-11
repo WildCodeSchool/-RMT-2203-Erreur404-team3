@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import "../css/DishInfo.css";
 
 function DishInfo({ dish }) {
   return (
@@ -8,19 +8,23 @@ function DishInfo({ dish }) {
         <img src={dish.image.src} alt={dish.image.alt} />
       </article>
       <article className="DI-front">
-        {/* <Button link="ChatPage" text="Retour à la liste" /> */}
         <h2>{dish.itemName}</h2>
+
         <article className="DI-allergenes">
           <h3>Ingredients</h3>
           <div>
-            {dish.ingredients.map((ingredient) => (
-              <p>{ingredient}</p>
-            ))}
+            <p>{dish.dishingredient1}</p>
+            <p>{dish.dishingredient2}</p>
+            <p>{dish.dishingredient3}</p>
           </div>
         </article>
         <article className="DI-description">
+          <h3>Quantité</h3>
+          <p>{dish.dishnumber}</p>
+        </article>
+        <article className="DI-description">
           <h3>Description</h3>
-          <p>{dish.description}</p>
+          <p>{dish.dishcomment}</p>
         </article>
         <Button link="/chat" text="Choisir ce plat" />
       </article>
@@ -29,3 +33,4 @@ function DishInfo({ dish }) {
 }
 
 export default DishInfo;
+
