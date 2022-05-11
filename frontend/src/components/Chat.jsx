@@ -63,10 +63,9 @@ function Chat({ socket, username, room }) {
           onChange={(event) => {
             setCurrentMessage(event.target.value);
           }}
-          onKeyPress={(event) => {
-            // eslint-disable-next-line no-unused-expressions
-            event.key === "Enter" && sendMessage();
-          }}
+          // onKeyPress={(event) => {
+          //   event.key === "Enter" && sendMessage();
+          // }}
         />
         <button type="button" onClick={sendMessage}>
           Envoyer

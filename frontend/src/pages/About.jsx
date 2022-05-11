@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import React from "react";
 import LittleBubbles from "../components/LittleBubbles";
 import FloattingTitle from "../components/FloattingTitle";

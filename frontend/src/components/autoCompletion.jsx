@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable no-shadow */
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -47,8 +44,10 @@ function AutoComplete() {
             )
             .map((suggestions) => (
               <div
-                key={suggestions.i}
+                aria-hidden="true"
+                role="button"
                 className="suggestion"
+                key={suggestions.i}
                 onClick={() => onSuggestionHandler(suggestions.strMeal)}
               >
                 {suggestions.strMeal}

@@ -1,7 +1,3 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/no-array-index-key */
 import axios from "axios";
 import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
@@ -50,8 +46,8 @@ function GetRecipes() {
               value={search}
             />
             {dishMatch &&
-              dishMatch.map((dish, index) => (
-                <div key={index}>
+              dishMatch.map((dish) => (
+                <div key={dish.id}>
                   <Link
                     className="dish-match"
                     to={`/displayingredient/${dish.strMeal}`}
