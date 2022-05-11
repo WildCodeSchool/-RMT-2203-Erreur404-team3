@@ -5,7 +5,6 @@ export default function RatingCounter() {
   const [rating, setRating] = useState(100);
 
   const handleRating = (rate) => {
-    console.warn(rate);
     setRating(rate);
   };
 
