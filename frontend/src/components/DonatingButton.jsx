@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom";
 import React from "react";
 
 export default function DonatingButton() {
   return (
-    // eslint-disable-next-line jsx-a11y/anchor-is-valid
-    <a href="#" className="donate">
+    <Link to="/pasdebol" className="donate">
       Contribuer💛
-    </a>
+    </Link>
   );
 }
