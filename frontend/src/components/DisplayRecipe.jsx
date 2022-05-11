@@ -7,7 +7,7 @@ function DisplayRecipe() {
   const [mealData, setMealData] = React.useState([]);
   const [userId, setUserId] = React.useState("");
   const [dishNumber, setDishNumber] = React.useState("");
-  const [dishComment] = React.useState("");
+  const [dishComment, setDishComment] = React.useState("");
   const [usersChatId, setUsersChatId] = React.useState("");
 
   const { recipe } = useParams();
@@ -100,6 +100,7 @@ function DisplayRecipe() {
           </div>
           <div className="comment-ingredient-input">
             <textarea
+              onChange={(e) => setDishComment(e.target.value)}
               cols="1"
               rows="1"
               spellCheck="true"

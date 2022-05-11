@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Geo from "./pages/Geo";
 import GeoAction from "./pages/GeoAction";
 import DishesList from "./pages/DishesList";
 import DishesInfos from "./pages/DishesInfos";
@@ -20,7 +19,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/disheslist" element={<DishesList />} />
         <Route path="/dishesinfos/:recipeid" element={<DishesInfos />} />
-        <Route path="/geo" element={<Geo />} />
         <Route path="/geo/:action" element={<GeoAction />} />
         <Route path="/chat" element={<Chatpage />} />
         <Route

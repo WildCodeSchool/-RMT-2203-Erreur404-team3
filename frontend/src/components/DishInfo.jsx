@@ -6,7 +6,7 @@ function DishInfo({ dish }) {
   return (
     <div className="dishInfo-container">
       <article className="DI-back">
-        <img src={dish.image.src} alt={dish.image.alt} />
+        <img src={dish.dishimage} alt={dish.dishname} />
       </article>
       <article className="DI-front">
         <h2>{dish.itemName}</h2>
@@ -32,5 +32,4 @@ function DishInfo({ dish }) {
     </div>
   );
 }
-
 export default DishInfo;
