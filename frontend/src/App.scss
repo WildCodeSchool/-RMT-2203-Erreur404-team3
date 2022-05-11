@@ -49,7 +49,6 @@ section {
     color: purple;
     background-color: rgb(168, 50, 189);
     z-index: 10;
-    text-align: center;
   }
 
   a.composent-button-link {
@@ -106,12 +105,9 @@ section {
   }
 
   .geo-map {
-    // height: 74vh;
     top: 0;
     z-index: 10;
-    // background-color: red;
     text-align: center;
-    // width: 100%;
 
     .pac-container {
       display: flex;
@@ -121,12 +117,6 @@ section {
     }
 
     div {
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      // position: relative;
-      // top: -200px;
-      // width: 100%;
 
       #googleMap {
         height: 79vh;
@@ -136,8 +126,6 @@ section {
           position: relative;
           z-index: 20;
           bottom: -20vh;
-          // display: flex;
-          // flex-direction: column-reverse;
 
           .autocomplete-dropdown-container {
             position: absolute;
@@ -151,15 +139,6 @@ section {
             width: 100%;
             z-index: 30;
             line-height: 1.5;
-          }
-          .location-search-input {
-            // position: relative;
-            // z-index: 30;
-          }
-        }
-        .googleMapContainer {
-          .googleMap {
-            position: absolute;
           }
         }
       }
@@ -346,4 +325,95 @@ section {
     text-align: center;
     margin: 10% 0;
   }
+}
+
+/********DonatingButton*************/
+a {
+  display: inline-block;
+  margin: 20px;
+  text-decoration: none;
+}
+
+.donate {
+  font-family: "Gagalin", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  background: rgb(168, 50, 189);
+  border-radius: 7px;
+  color: #fcf680;
+  padding: 15px 65px 15px 15px;
+}
+
+/**********Media**************/
+
+.mediabutton {
+  float: left;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mediabutton span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+}
+
+.mediabutton:hover {
+  width: 200px;
+}
+
+.mediabutton:nth-child(1):hover .icon {
+  background: #4267b2;
+}
+
+.mediabutton:nth-child(2):hover .icon {
+  background: #1da1f2;
+}
+
+.mediabutton:nth-child(3):hover .icon {
+  background: #0a66c2;
+}
+.mediabutton:nth-child(4):hover .icon {
+  background:#fcf680;
+}
+
+.mediabutton:nth-child(1) span {
+  color: #4267b2;
+}
+
+.mediabutton:nth-child(2) span {
+  color: #1da1f2;
+}
+
+.mediabutton:nth-child(3) span {
+  color: #0a66c2;
+}
+
+.mediabutton:nth-child(4) span {
+  color: black;
+}
+.mediabutton .icon {
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	border-radius: 50px;
+	display: inline-block;
+	transition: all 0.3s ease-in-out;
+}
+
+.mediabutton .icon i {
+	font-size: 25px;
+	line-height: 60px;
+	transition: all 0.3s ease-in-out;
+}
+
+.mediabutton:hover i {
+	color: #fff;
 }
