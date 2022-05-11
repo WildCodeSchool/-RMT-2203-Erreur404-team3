@@ -140,7 +140,7 @@ class MapContainer extends Component {
         <div
           className="googleMapContainer"
           style={{
-            margin: "-30% 10%",
+            margin: "-30% 12%",
             // width: "100%",
           }}
         >
